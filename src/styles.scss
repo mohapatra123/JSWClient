@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+$body-bg:    #F3F4F8 !default;
+$body-color: #4F466F !default;
+$primary:    #FF5D2E !default;
+$secondary:  #000926 !default;
+$white:    #fff !default;
+$gray-100: #F0F0F0 !default;
+$gray-200: #fafafa !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #CACED5 !default;
+$gray-500: #D5D5D5 !default;
+$gray-600: #8B83A4 !default;
+$gray-700: #495057 !default;
+$gray-800: #F8F8F8 !default;
+$gray-900: #475F7B !default;
+$black:    #373C44  !default;
+$blue:     #007bff !default;
+$indigo:   #6610f2 !default;
+$purple:   #6f42c1 !default;
+$pink:     #e83e8c !default;
+$red:      #FF0000 !default;
+$orange:   #fd7e14 !default;
+$yellow:   #ffdf02 !default;
+$green:    #1DAD81 !default;
+$teal:     #20c997 !default;
+$cyan:     #007bff !default;
+$thBg:     #F5F5F5 !default;
+$input-bg: #fcfcfc !default;
+$input-color:$gray-800!default;
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@media (min-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1400px;
+    }
+}
+.iconsprt{
+    display: flex;
+    background-image: url(../src/assets/images/spriteImage.svg);
+    &.social{
+        background-size: 450px;
+        width: 16px;
+        height: 16px;
+        &.inst{
+            background-position:-48px -69px;
+        }
+        &.twit{
+            background-position:-1px -69px;
+        }
+        &.face{
+            background-position:-51px -48px;
+            width: 10px;
+        }
+
+    }
+    &.contacticon{
+        height: 18px;
+        width: 24px;
+        background-position: -4px -28px;
+        background-size: 500px;
+
+    }
+    &.advantage{
+        height: 80px;
+        width: 80px;
+        &.agnostic{
+            background-position: -194px -156px;
+        }
+        &.robust{
+            background-position: -10px -155px;
+        }
+        &.ethical{
+            background-position: -488px -156px;
+        }
+        &.respons{
+            background-position:-390px -163px;
+        }
+        &.training{
+            background-position: -103px -156px;
+        }
+        &.domain{
+            background-position:-291px -156px;
+        }
+
+    }
+
+
+}
+.SecTitle{
+    color: $primary;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: $secondary;
+    padding: 30px 0 10px;
+    .logo{
+        width: 200px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .qucklink{
+        strong{
+            color: $primary;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        ul{
+            margin: 0 0 20px;
+            padding: 0;
+            list-style: none;
+            li{
+                a{
+                    color: $white;
+                    font-size: 14px;
+                }
+            }
+        }
+        p{
+            color: $white;
+            margin-bottom: 10px;
+        }
+        .form-control{
+            background: transparent;
+            border-color: $primary;
+            margin: 10px 0;
+        }
+    }
+}
