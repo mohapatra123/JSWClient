@@ -1,0 +1,36 @@
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #FF5D2E;
+    color: #fff;
+    padding: 20px 0 10px;
+    .fotterSocial{
+        .socialM{
+            display: flex;
+            align-items: center;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                margin-left: 10px;
+                li{
+                    margin-left: 30px;
+                }
+            }
+            .social{
+                &.inst{
+                    background-position: -69px -68px;
+                }
+                &.twit{
+                    background-position: -25px -69px;
+                }
+                &.face{
+                    background-position: -64px -48px;
+                }
+            }
+        }
+
+    }
+}

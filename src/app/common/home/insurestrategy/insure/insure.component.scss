@@ -1,3 +1,96 @@
 .insureAI{
     background: #000926;
+    margin-bottom: 100px;
+    .container{
+        padding: 50px 0;
+        color: #fff;
+        .SecTitle{
+        margin: 0 0 10px;
+            span{
+                color: #fff;
+            }
+            +span{
+               font-size: 14px;
+            }
+        }
+        ul{
+            margin: 20px 0 0;
+            padding: 0 100px 0 0;
+            list-style: none;
+            li{
+                padding: 10px 20px;
+                background-color:rgba(255,255,255,0);
+                display: flex;
+                margin-bottom: 10px;
+                width: 300px;
+                transition: all .5s ease-in-out;
+                a{
+                    border-left: 1px solid #fff;
+                    padding: 5px 20px;
+                    position: relative;
+                    color: #fff;
+                    transition: all .5s ease-in-out;
+                    &::before{
+                        content: '';
+                        height: 50%;
+                        width: 3px;
+                        position: absolute;
+                        background: #FF5D2E;
+                        left: -1px;
+                        top: 0;
+                        z-index: 1;
+                        opacity: 0;
+                    }
+                }
+                &:hover{
+                    background-color:rgba(255,255,255, .2);
+                    a{
+                        text-decoration: none;
+                        &::before{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            +.btn{
+            margin: 20px;
+            }
+        }
+        .insuranceSlider{
+            figure{
+                position: relative;
+                h5{
+                    font-weight: bold;
+                }
+                .secData{
+                    position: absolute;
+                    background-color: rgba(0,0,0, .4);
+                    top: 0;
+                    left: 0;
+                    padding: 20px;
+                }
+            }
+
+        }
+
+    }
+.shape{
+    transform: rotate(-180deg);
+    &::before{
+        top: -99px;
+    }
+    .left{
+        top: -54px;
+        border-radius: 0;
+        &::before{
+            border-radius: 0;
+            height: 30px;
+            left: 44px;
+            position: absolute;
+            transform: rotate(180deg);
+            width: 120px;
+            top: 28px;
+        }
+    }
+}
 }
