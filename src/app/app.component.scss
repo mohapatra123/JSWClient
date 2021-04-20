@@ -6,6 +6,8 @@
         top: 0;
         left: 0;
         z-index: 1;
+        height:500px ;
+
 
     }
     .topSec{
@@ -193,6 +195,20 @@
 }
 .insureAI{
     background: #000926;
+    margin: 0 0 100px;
+    .shape{
+        transform: rotate(-180deg);
+        bottom: 30px;
+        .left{
+            left: 0;
+            border-radius: 0;
+            top: -90px;
+            &::before{
+                border-radius: 0;
+                left: 36px;
+            }
+        }
+    }
 }
 
 .trainingSec{

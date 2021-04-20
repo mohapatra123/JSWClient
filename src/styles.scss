@@ -32,10 +32,12 @@ $input-color:$gray-800!default;
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-
+body{
+    overflow-x: hidden;
+}
 @media (min-width: 1200px){
     .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1400px;
+        max-width: 1280px;
     }
 }
 img{
@@ -142,61 +144,61 @@ footer{
             margin: 10px 0;
         }
     }
-    .shape{
-        position: relative;
-        &::before{
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 1600px solid transparent;
-            border-right: 0px solid transparent;
-            border-bottom: 100px solid $secondary;
-            display: flex;
-            position: absolute;
-            top: -130px;
-            right: 0;
-        }
-       .left {
-        background-color: rgba(255, 172, 64, 0.871);
-        border-radius: 33px;
-        height: 47px;
-        left: -75px;
+
+}
+.shape{
+    position: relative;
+    &::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 1600px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 100px solid $secondary;
+        display: flex;
         position: absolute;
-        top: -86px;
+        top: -130px;
+        right: 0;
+    }
+   .left {
+    background-color: rgba(255, 172, 64, 0.871);
+    border-radius: 33px;
+    height: 47px;
+    left: -75px;
+    position: absolute;
+    top: -86px;
+    transform: rotate( 176deg );
+    width: 269px;
+    &::before{
+        content: '';
+    background-color: rgba(255,102,0,0.6);
+    border-radius: 33px;
+    height: 37px;
+    left: 54px;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 209px;
+    top:30px;
+        }
+     }
+     .right {
+        background-color: rgba(255, 172, 64, 0.871);
+        border-radius:0 33px 33px 0;
+        height: 47px;
+        right:-3px;
+        position: absolute;
+        top: -124px;
         transform: rotate( 176deg );
-        width: 269px;
+        width: 200px;
         &::before{
             content: '';
         background-color: rgba(255,102,0,0.6);
-        border-radius: 33px;
+        border-radius:0 33px 33px 0;
         height: 37px;
-        left: 54px;
+        right: 54px;
         position: absolute;
-        transform: rotate(180deg);
-        width: 209px;
-        top:30px;
+        width: 150px;
+        top:-18px;
             }
          }
-         .right {
-            background-color: rgba(255, 172, 64, 0.871);
-            border-radius: 33px;
-            height: 47px;
-            right: -75px;
-            position: absolute;
-            top: -128px;
-            transform: rotate( 176deg );
-            width: 269px;
-            &::before{
-                content: '';
-            background-color: rgba(255,102,0,0.6);
-            border-radius: 33px;
-            height: 37px;
-            right: 54px;
-            position: absolute;
-            transform: rotate(180deg);
-            width: 209px;
-            top:-18px;
-                }
-             }
-    }
 }
