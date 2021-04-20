@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 $body-bg:    #F3F4F8 !default;
-$body-color: #4F466F !default;
+$body-color: #373C44 !default;
 $primary:    #FF5D2E !default;
 $secondary:  #000926 !default;
 $white:    #fff !default;
@@ -36,6 +36,15 @@ $input-color:$gray-800!default;
 @media (min-width: 1200px){
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1400px;
+    }
+}
+img{
+    max-width: 100%;
+}
+.form-control{
+    color: $black;
+    &:focus{
+        color: $black;
     }
 }
 .iconsprt{
@@ -93,10 +102,13 @@ $input-color:$gray-800!default;
 .SecTitle{
     color: $primary;
     margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 500;
 }
 footer{
     background-color: $secondary;
     padding: 30px 0 10px;
+    margin-top: 130px;
     .logo{
         width: 200px;
         img{
@@ -129,5 +141,62 @@ footer{
             border-color: $primary;
             margin: 10px 0;
         }
+    }
+    .shape{
+        position: relative;
+        &::before{
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 1600px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 100px solid $secondary;
+            display: flex;
+            position: absolute;
+            top: -130px;
+            right: 0;
+        }
+       .left {
+        background-color: rgba(255, 172, 64, 0.871);
+        border-radius: 33px;
+        height: 47px;
+        left: -75px;
+        position: absolute;
+        top: -86px;
+        transform: rotate( 176deg );
+        width: 269px;
+        &::before{
+            content: '';
+        background-color: rgba(255,102,0,0.6);
+        border-radius: 33px;
+        height: 37px;
+        left: 54px;
+        position: absolute;
+        transform: rotate(180deg);
+        width: 209px;
+        top:30px;
+            }
+         }
+         .right {
+            background-color: rgba(255, 172, 64, 0.871);
+            border-radius: 33px;
+            height: 47px;
+            right: -75px;
+            position: absolute;
+            top: -128px;
+            transform: rotate( 176deg );
+            width: 269px;
+            &::before{
+                content: '';
+            background-color: rgba(255,102,0,0.6);
+            border-radius: 33px;
+            height: 37px;
+            right: 54px;
+            position: absolute;
+            transform: rotate(180deg);
+            width: 209px;
+            top:-18px;
+                }
+             }
     }
 }
