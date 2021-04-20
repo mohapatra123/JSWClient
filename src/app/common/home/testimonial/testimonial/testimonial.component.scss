@@ -1,0 +1,38 @@
+.testimonials{
+    margin-bottom: 200px;
+    h4{
+        margin-bottom:30px;
+    }
+    .getintouch{
+        padding-right: 100px;
+        select{
+            &.form-control{
+                color: black;
+            }
+        }
+    }
+    .col-6{
+        display: flex;
+        .t-card{
+            background-color: #fff;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .userpart{
+        h5{
+            color: #FF5D2E;
+            font-size: 20px;
+        }
+        .adress{
+            color: #495057;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+          margin: 0;
+        }
+    }
+
+}

@@ -1,0 +1,82 @@
+.usecaseSec{
+    padding: 50px 0 50px;
+    .SecTitle{
+        margin-bottom: 50px;
+        span{
+            color:#000;
+        }
+    }
+    .usecaseList{
+        figure{
+            margin: 0;
+        }
+        figcaption{
+            padding:15px;
+            strong{
+                margin-bottom: 10px;
+                display: flex;
+                font-size: 14px;
+            }
+            p{
+               font-size: 14px;
+            }
+
+        }
+    }
+}
+
+.listing{
+    display: flex;
+    justify-content: space-between;
+    .rList{
+        width: 28%;
+        border: 1px solid #FF5D2E;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        figcaption{
+            padding:0 15px 15px;
+            p{
+                margin: 0;
+            }
+        }
+        figure{
+            position: relative;
+            transition: all .5s ease-in-out;
+            img{
+                max-width: 100%;
+            }
+            .tag{
+                position:absolute;
+                top: 30px;
+                left: 0;
+                background-color: rgba(255, 93, 46, .6);
+                color: #fff;
+                font-size: 18px;
+                padding: 10px 20px;
+                border-radius: 0 6px 6px 0;
+                z-index: 2;
+            }
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+                transition: all .5s ease-in-out;
+            }
+        }
+        &:hover{
+            figure{
+                &::after{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+}
