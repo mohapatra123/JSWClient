@@ -1,6 +1,5 @@
 .resources{
     padding: 50px 0;
-    margin: 50px 0;
     background-color: #fff;
     .SecTitle{
         margin-bottom: 50px;
@@ -13,36 +12,52 @@
 
 .listing{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     .rList{
         width: 28%;
-        border: 1px solid #FF5D2E;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 4px;
         cursor: pointer;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0px 2px 10px #ccc;
+        transition: all .5s ease-in-out;
         figcaption{
-            padding:0 15px 15px;
+            padding:0;
             p{
                 margin: 0;
+            }
+            .tag{
+                z-index: 2;
+                display:flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 10px;
+                span{
+                    color: #fff;
+                    font-size: 12px;
+                    padding:2px 10px;
+                    border-radius:2px;
+                    background-color: rgba(255, 93, 46);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
             }
         }
         figure{
             position: relative;
             transition: all .5s ease-in-out;
+            overflow: hidden;
             img{
                 max-width: 100%;
+                -webkit-transition: all 1s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+                -o-transition: all 1s ease-in-out;
+                -ms-transition: all 1s ease-in-out;
+                transition: all 1s ease-in-out;
             }
-            .tag{
-                position:absolute;
-                top: 30px;
-                left: 0;
-                background-color: rgba(255, 93, 46, .6);
-                color: #fff;
-                font-size: 18px;
-                padding: 10px 20px;
-                border-radius: 0 6px 6px 0;
-                z-index: 2;
-            }
+
             &::after{
                 content: '';
                 width: 100%;
@@ -57,9 +72,16 @@
             }
         }
         &:hover{
+            box-shadow: 0px 2px 10px rgb(131, 131, 131);
             figure{
                 &::after{
                     opacity: .5;
+                }
+                img{
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                    transform: scale(1.1);
                 }
             }
         }

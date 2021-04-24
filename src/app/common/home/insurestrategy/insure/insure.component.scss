@@ -1,6 +1,11 @@
 .insureAI{
-    background: #000926;
-    margin-bottom: 100px;
+   position: relative;
+   overflow: hidden;
+    margin-bottom: 50px;
+    padding-bottom: 99px;
+    .insureAIContent{
+        background: #000926;
+    }
     .container{
         padding: 50px 0;
         color: #fff;
@@ -18,39 +23,50 @@
             padding: 0 100px 0 0;
             list-style: none;
             li{
-                padding: 10px 20px;
                 background-color:rgba(255,255,255,0);
                 display: flex;
                 margin-bottom: 10px;
                 width: 300px;
                 transition: all .5s ease-in-out;
                 a{
-                    border-left: 1px solid #fff;
-                    padding: 5px 20px;
+                    border: none;
+                    padding: 10px 20px;
                     position: relative;
                     color: #fff;
                     transition: all .5s ease-in-out;
-                    &::before{
-                        content: '';
-                        height: 50%;
-                        width: 3px;
-                        position: absolute;
-                        background: #FF5D2E;
-                        left: -1px;
-                        top: 0;
-                        z-index: 1;
-                        opacity: 0;
-                    }
-                }
-                &:hover{
-                    background-color:rgba(255,255,255, .2);
-                    a{
-                        text-decoration: none;
+                    background-color: transparent;
+                    span{
+                        border-left: 1px solid #fff;
+                        display: flex;
+                        position: relative;
+                        padding: 5px 20px;
                         &::before{
-                            opacity: 1;
+                            content: '';
+                            height: 0%;
+                            width: 3px;
+                            position: absolute;
+                            background: #FF5D2E;
+                            left: -1px;
+                            top: 0;
+                            z-index: 2;
+                            opacity: 0;
+                            transition: all 1s ease-in-out;
                         }
                     }
+                    &.active, &:hover{
+                        background-color:rgba(255,255,255, .2);
+                            text-decoration: none;
+                            span{
+                                &::before{
+                                    opacity: 1;
+                                    height: 50%;
+                                }
+                            }
+
+
+                    }
                 }
+
             }
             +.btn{
             margin: 20px;
@@ -81,16 +97,30 @@
     }
     .left{
         top: -54px;
-        border-radius: 0;
         &::before{
-            border-radius: 0;
             height: 30px;
             left: 44px;
             position: absolute;
             transform: rotate(180deg);
-            width: 120px;
+            width: 160px;
             top: 28px;
         }
     }
 }
+}
+.scrollspy-example {
+    position: relative;
+    height: 400px;
+    margin-top: .5rem;
+    overflow: auto;
+    &::-webkit-scrollbar-thumb {
+        background:red;
+      }
+
+      &::-webkit-scrollbar-track {
+        background:blue;
+      }
+    .list{
+        padding: 50px;
+    }
 }

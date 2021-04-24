@@ -1,7 +1,12 @@
 .trainingSec{
     padding: 50px 0 50px;
+    background-image: url(../../../../../assets/images/trainging-section-bg.jpg);
+    background-size: 100%;
+    object-fit: cover;
+    margin-top: 50px;
         .SecTitle{
             margin-bottom: 50px;
+            color: #fff;
         }
         .trnyList{
             width: 28%;
@@ -12,16 +17,14 @@
                     p{
                         text-align: center;
                     }
-    
+
                 }
-    
+
             }
-            .enroll{
-                padding: 30px 0 0;
-            }
+
         }
-    
-    
+
+
 }
 
 .listing{
@@ -29,21 +32,31 @@
     justify-content: space-between;
     .rList{
         width: 28%;
-        border: 1px solid #FF5D2E;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        padding: 20px;
         cursor: pointer;
         figcaption{
             padding:0 15px 15px;
             p{
                 margin: 0;
+                color: #fff;
             }
         }
         figure{
             position: relative;
             transition: all .5s ease-in-out;
+            overflow: hidden;
             img{
                 max-width: 100%;
+                -webkit-transition: all 1s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+                -o-transition: all 1s ease-in-out;
+                -ms-transition: all 1s ease-in-out;
+                transition: all 1s ease-in-out;
             }
             .tag{
                 position:absolute;
@@ -64,15 +77,47 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                z-index: 0;
                 opacity: 0;
                 transition: all .5s ease-in-out;
             }
+            .enroll{
+                position:absolute;
+                top: 50%;
+                margin-top: -30px;
+                transition: all .5s ease-in-out;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .btn{
+                    border-color: #fff;
+                    position: relative;
+                    z-index: 99;
+                    color: #fff;
+                    opacity: 0;
+                    font-size: 14px;
+                    transition: all .5s ease-in-out;
+
+                }
+
+               }
         }
         &:hover{
             figure{
                 &::after{
                     opacity: .5;
+                }
+                img{
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+                .enroll{
+                    .btn{
+                        opacity: 1;
+                    }
+
                 }
             }
         }
