@@ -1,4 +1,4 @@
-<section class="insureAI">
+<section class="insureAI sticky-top">
     <!-- <div class="container">
       <div class="row">
         <div class="col-6">
@@ -54,7 +54,7 @@
           </ul>
         </div>
         <div class="col-6">
-          <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+          <div data-spy="scroll" (scroll)="onScroll($event)" data-target="#list-example" data-offset="0" class="scrollspy-example">
             <div id="list-item-1" class="list insuranceSlider">
               <figure>
                 <img src="../assets/images/underwriting-Risk-Rating.jpg" alt="insurance" title="insurance">
