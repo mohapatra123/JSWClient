@@ -18,6 +18,7 @@ import { SolutionComponent } from './solution/solution/solution.component';
 import { ProductsComponent } from './products/products/products.component';
 import { ServicesComponent } from './services/services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule, IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
