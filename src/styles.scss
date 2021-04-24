@@ -223,3 +223,36 @@ footer{
         }
     }
 }
+.resourceslist, .trainingSec{
+    .carousel-cells {
+        .carousel-cell{
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        }
+        .carousel-container{
+            .carousel-dots{
+                bottom: -24px !important;
+                .carousel-dot{
+                    border-color: #FF5D2E !important;
+                    &-active{
+                        background-color:#FF5D2E !important;
+                    }
+                }
+            }
+        }
+
+        .carousel-arrows{
+            .carousel-arrow{
+                &.carousel-arrow-prev{
+                    left: -20px;
+                }
+                &.carousel-arrow-next{
+                    right: -20px;
+                }
+            }
+        }
+}
+
+

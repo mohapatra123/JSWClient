@@ -23,10 +23,12 @@
             h4{
                 font-weight: normal;
                 color: #fff;
-                font-size: 18px;
                 line-height: 30px;
                 padding: 20px 0 30px;
             }
+        }
+        .btn+.btn{
+            margin-left: 10px;
         }
     }
 }
