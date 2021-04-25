@@ -35,6 +35,7 @@
                     color: #fff;
                     transition: all .5s ease-in-out;
                     background-color: transparent;
+                    z-index: 0;
                     span{
                         border-left: 1px solid #fff;
                         display: flex;
@@ -72,7 +73,13 @@
             margin: 20px;
             }
         }
+        .scroolSec{
+            position: absolute;
+            left: 0;
+        }
         .insuranceSlider{
+            padding-left: 50%;
+            z-index: 99;
             figure{
                 position: relative;
                 h5{
@@ -112,15 +119,31 @@
     position: relative;
     height: 400px;
     margin-top: .5rem;
-    overflow: auto;
-    &::-webkit-scrollbar-thumb {
-        background:red;
-      }
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-      &::-webkit-scrollbar-track {
-        background:blue;
-      }
     .list{
         padding: 50px;
+    }
+}
+#insureAIscrool{
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    &:-webkit-scrollbar
+    {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: #000000;
+        border: 2px solid #555555;
     }
 }
