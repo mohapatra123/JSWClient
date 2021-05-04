@@ -1,18 +1,24 @@
 .insureAI{
    //position: relative;
    overflow: hidden;
-    margin-bottom: 50px;
-    padding-bottom: 99px;
+    margin-bottom: 0;
+    padding: 100px 0;
+    background-color: #fff;
     .insureAIContent{
         background: #000926;
+        padding: 20px 0 0    ;
+    }
+    .scroolPosition{
+        position: relative;
     }
     .container{
         padding: 50px 0;
         color: #fff;
         .SecTitle{
         margin: 0 0 10px;
+        color: #fff;
             span{
-                color: #fff;
+                color: #FF5D2E;
             }
             +span{
                font-size: 14px;
@@ -82,6 +88,7 @@
             z-index: 99;
             figure{
                 position: relative;
+                box-shadow: 0px 0px 15px #007bff;
                 h5{
                     font-weight: bold;
                 }
@@ -113,11 +120,17 @@
             top: 28px;
         }
     }
+    &.top{
+        transform: rotate(0deg);
+        &::before{
+            top: -99px;
+        }
+    }
 }
 }
 .scrollspy-example {
     position: relative;
-    height: 400px;
+    height: 410px;
     margin-top: .5rem;
     overflow-y: scroll;
     &::-webkit-scrollbar {
@@ -125,8 +138,14 @@
     }
 
     .list{
-        padding: 50px;
+        padding:15px 80px 80px;
     }
+}
+.insureMore{
+    margin-top: 20px;
+    position: relative;
+    z-index: 999;
+    padding-left:20px ;
 }
 #insureAIscrool{
     &::-webkit-scrollbar-track

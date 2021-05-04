@@ -1,3 +1,12 @@
+.homepage{
+        background-image: url(../../../assets/images/Banner-bg-image.png);
+        background-position: center top;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        margin-top: -100px;
+
+}
 .headerSec{
     position: relative;
     .headerbanner{
@@ -13,7 +22,7 @@
         z-index: 2;
         padding: 0px 0 100px;
         .container{
-            padding: 200px 0 300px;
+            padding: 300px 0 180px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,6 +34,12 @@
                 color: #fff;
                 line-height: 30px;
                 padding: 20px 0 30px;
+            }
+        }
+        .bannerClick{
+            .btn{
+                padding-left: 30px;
+                padding-right: 30px;
             }
         }
         .btn+.btn{

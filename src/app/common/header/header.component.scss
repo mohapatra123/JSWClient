@@ -1,6 +1,6 @@
 .topSec{
     z-index:100000;
-    background-color: rgba(0, 0, 0,.8);
+    background-color: rgba(0, 25, 37, .9);
 
     .topmedia{
         background-color: #fff;
@@ -70,22 +70,43 @@
                         content: '';
                         height: 2px;
                         width: 0%;
-                        background-color:#fd7e14 ;
+                        background-color:#FF5D2E ;
                         position: absolute;
                         left: 0;
                         bottom: 0;
                         transition: all .2s ease-in-out;
                         opacity: 0;
                     }
+                    &.active{
+                        color: #FF5D2E;
+                        font-weight: bold;
+                        &::after{
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background-color:#FF5D2E ;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            transition: all .2s ease-in-out;
+                            opacity: 1;
+                        }
+                    }
                 }
                 &.request{
                     .btn{
                         padding: 5px 15px 10px;
-                        border-radius: 6px;
                         font-weight: bold;
                         line-height: normal;
                         margin-left: 30px;
                         font-size: 14px;
+                        border-color: #fff;
+                        color: #fff;
+                        &:hover,&:focus{
+                            color: #FF5D2E;
+                            border-color: #FF5D2E;
+                            background-color: transparent;
+                        }
                     }
                 }
                 &.menuMore{
@@ -155,9 +176,9 @@
                 &:hover{
                     >a{
                         text-decoration: none;
-                        color:#fd7e14 ;
+                        color:#FF5D2E ;
                         em{
-                            border-top: 4px solid #fd7e14;
+                            border-top: 4px solid #FF5D2E;
                         }
                         &::after{
                             content: '';
@@ -183,6 +204,7 @@
 
 @media screen and (max-width: 600px) {
     .topSec{
+
         .menuSec{
             .logo{
                 max-width: 150px;
@@ -195,13 +217,13 @@
                             display: flex;
                             width: 100%;
                             padding: 10px;
-                            &:hover{
-                                background-color: #000;
-                                &::after{
-                                    height: 100%;
-                                    width: 2px;
-                                }
-                            }
+                            // &:hover{
+                            //     background-color: #000;
+                            //     &::after{
+                            //         height: 100%;
+                            //         width: 2px;
+                            //     }
+                            // }
                         }
                         &.menuMore{
                             flex-direction: column;

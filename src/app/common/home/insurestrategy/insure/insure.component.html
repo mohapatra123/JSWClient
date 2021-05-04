@@ -1,4 +1,4 @@
-<section class="insureAI sticky-top">
+<section class="insureAI">
     <!-- <div class="container sticky-top">
       <div class="row">
         <div class="col-6">
@@ -31,11 +31,16 @@
         </div>
       </div>
     </div> -->
+    <div class="shape top">
+      <div class="left"></div>
+
+    </div>
     <div class="insureAIContent">
-    <div class="container" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
-      <div class="row">
+      <div  class="container">
+    <div data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+      <div class="row scroolPosition">
         <div class="col-6">
-          <h2 class="SecTitle">InsureAI <span> - A Data Science Wizard's product</span></h2>
+          <h2 class="SecTitle">InsureAI <span> - A DSW platform solution</span></h2>
           <span>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</span>
           <ul id="list-example" class="list-group">
             <li>
@@ -52,6 +57,7 @@
             </li>
 
           </ul>
+          <div class="insureMore"><button type="submit" class="btn btn-outline-primary">View all use cases</button></div>
         </div>
         <div class="col-12 scroolSec" id="insureAIscrool">
           <div data-spy="scroll" (scroll)="onScroll($event)" data-target="#list-example" data-offset="0" class="scrollspy-example">
@@ -96,6 +102,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <app-usecase></app-usecase>
   </div>
     <div class="shape">
       <div class="left"></div>

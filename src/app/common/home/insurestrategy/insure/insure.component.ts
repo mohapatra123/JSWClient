@@ -15,11 +15,11 @@ export class InsureComponent implements OnInit {
 
   scrolled: boolean = false;
   myTag: any;
-  onScroll($event: any){    
+  onScroll($event: any){
     if($event.target.scrollTop == 1408){
       let myTag: DOMTokenList;
-      myTag = this.el.nativeElement.querySelector("section").classList;      
+      myTag = this.el.nativeElement.querySelector("section").classList;
       myTag.remove("sticky-top");
     }
-  } 
+  }
 }

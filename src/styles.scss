@@ -27,12 +27,15 @@ $cyan:     #007bff !default;
 $thBg:     #F5F5F5 !default;
 $input-bg: #fcfcfc !default;
 $input-color:$gray-800!default;
+$font-family-base: "Roboto",
+sans-serif;
 
 
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import url(../src/animation.scss);
+@import url(../src/assets/webfont/webRbtFont.scss);
 body{
     overflow-x: hidden;
 }
@@ -40,6 +43,9 @@ body{
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1280px;
     }
+}
+.btn{
+    border-radius: 0;
 }
 img{
     max-width: 100%;
@@ -103,10 +109,13 @@ img{
 
 }
 .SecTitle{
-    color: $primary;
-    margin-bottom: 20px;
-    font-size: 28px;
+    color: #002c67;
+    margin-bottom: 40px;
+    font-size: 34px;
     font-weight: bold;
+    .MoreLight{
+        color: $primary;
+    }
 }
 footer{
 
@@ -115,6 +124,7 @@ footer{
    overflow: hidden;
     padding: 100px 0 10px;
     z-index: 2;
+    background: #fff;
     .footerlinks{
     background-color: $secondary;
     padding-top: 40px;
@@ -219,14 +229,29 @@ footer{
         .carousel-indicators{
             li{
                 background-color: #FF5D2E !important;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
             }
+        }
+        .carousel-control-prev-icon{
+            background-image:url(../src/assets/images/arrow.png) !important;
+            height: 50px;
+            width: 50px;
+        }
+        .carousel-control-next-icon{
+            background-image:url(../src/assets/images/arrow.png) !important;
+            height: 50px;
+            width: 50px;
+            transform: rotate(180deg);
+
         }
     }
 }
 .resourceslist, .trainingSec{
     .carousel-cells {
         .carousel-cell{
-            padding: 15px;
+            padding: 0px;
             display: flex;
             justify-content: center;
         }
@@ -247,9 +272,13 @@ footer{
             .carousel-arrow{
                 &.carousel-arrow-prev{
                     left: -20px;
+                    background-size: 50px;
+                    box-shadow: none;
                 }
                 &.carousel-arrow-next{
                     right: -20px;
+                    background-size: 50px;
+                    box-shadow: none;
                 }
             }
         }
