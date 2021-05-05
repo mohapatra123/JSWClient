@@ -37,14 +37,15 @@
             }
         }
         .bannerClick{
+            margin-top: 30px;
             .btn{
                 padding-left: 30px;
                 padding-right: 30px;
+                border-color: #fff;
+                color: #fff;
             }
         }
-        .btn+.btn{
-            margin-left: 10px;
-        }
+
     }
 }
 .contentSec{

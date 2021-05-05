@@ -9,19 +9,33 @@
     h2{
         margin-bottom:40px;
         color: #FF5D2E;
-        &::before{
-            content: "“";
-        }
+
     }
     .contentpart{
         display: flex;
         flex-direction: column;
         align-items: center;
+        &::before{
+            content: '';
+            background-image: url(../../../../../assets/images/quote.png);
+            height: 66px;
+            width: 84px;
+            position: absolute;
+            top: 26px;
+            left: 80px;
+            z-index: 9;
+            display: block;
+            background-size: 84px;
+        }
+
         .t-card{
             padding:0 150px 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            // background-image: url(../../../../../assets/images/quote.png);
+            // background-repeat: no-repeat;
+            // background-position: top left;
             p.happyuserCont{
                 text-align: center;
                 font-size: 20px;
@@ -56,5 +70,14 @@
         border-bottom: 100px solid #f2f6fc;
     }
 }
+}
+.carousel-inner{
+    &::after{
+        content: '';
+        background-image: url(../../../../../assets/images/quote.png);
+        height: 40px;
+        width: 40px;
+        position: absolute;
+    }
 }
 
