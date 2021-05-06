@@ -37,7 +37,73 @@
     </div>
     <div class="insureAIContent">
       <div  class="container">
-    <div data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+        <div class="tabLayout">
+          <ul ngbNav #nav="ngbNav" class="nav-tabs">
+            <li class="insurTitle"><h2 class="SecTitle">InsureAI <span> - A DSW platform solution</span></h2>
+              <span>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</span></li>
+            <li ngbNavItem>
+              <a ngbNavLink>Underwriting & Risk Rating</a>
+              <ng-template ngbNavContent>
+                <div class="list insuranceSlider">
+                  <figure>
+                    <img src="../assets/images/Underwriting-risk-rating.png" alt="insurance" title="insurance">
+                    <div class="secData">
+                      <h5>Underwriting and Risk Rating</h5>
+                      <p>InsureAI assists underwriters in analysing data and relevant document generation to speed up the underwriting process. This helps the underwriter to better quantify the risk at the risk definition phase and create better premium prediction matches. InsureAI also ensures mitigates human errors due to intensive routine tasks, data saturation and seasonal business spikes.</p>
+                    </div>
+                  </figure>
+                </div>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Customer Servicing</a>
+              <ng-template ngbNavContent>
+                <div class="list insuranceSlider">
+                  <figure>
+                    <img src="../assets/images/custSvr.png" alt="insurance" title="insurance">
+                    <div class="secData">
+                      <h5>Customer Service</h5>
+                      <p>Customer interaction is key to brand goodwill, customer retention and repeat business. Understanding customer queries and grievances, and creating fast and easy resolution processes, generates positive customer opinion. InsureAI employs NLP and AI assisted chat-bots to ensure customer service satisfaction.</p>
+                    </div>
+                  </figure>
+                </div>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Fraud Detection</a>
+              <ng-template ngbNavContent>
+                <div class="list insuranceSlider">
+                  <figure>
+                    <img src="../assets/images/fraud-Detection.png" alt="insurance" title="insurance">
+                    <div class="secData">
+                      <h5>Fraud Prevention</h5>
+                      <p>InsureAI analyzes data streaming from known and unknown sources to flag concealment, suspect claims, transactions, document submissions or patterns of behaviour for immediate action.</p>
+                    </div>
+                  </figure>
+                </div>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Claims Management</a>
+              <ng-template ngbNavContent>
+                <div class="list insuranceSlider">
+                  <figure>
+                    <img src="../assets/images/claims-Managemetnt.png" alt="insurance" title="insurance">
+                    <div class="secData">
+                      <h5>Operational Efficiency and Claims Management</h5>
+                      <p>Inefficiency in operations from application to premium servicing and claims settlements can impact revenue and customer satisfaction. Insurance application, underwriting and claims settlement processes can be streamlined, made faster and more accurate with InsureAI.</p>
+                    </div>
+                  </figure>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+
+          <div [ngbNavOutlet]="nav" class="mt-2"></div>
+        </div>
+        <div class="insureMore"><button type="submit" class="btn btn-outline-primary btn-lg">View all use cases</button></div>
+    <!-- <div data-spy="scroll" data-target="#myScrollspy" data-offset="20">
       <div class="row scroolPosition">
         <div class="col-6">
           <h2 class="SecTitle">InsureAI <span> - A DSW platform solution</span></h2>
@@ -101,7 +167,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <app-usecase></app-usecase>
   </div>
