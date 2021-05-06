@@ -21,7 +21,7 @@
                 color: #FF5D2E;
             }
             +span{
-               font-size: 14px;
+               font-size: 18px;
             }
         }
 
@@ -45,9 +45,11 @@
                     margin: 30px 30px 0;
                     h5{
                         text-transform: uppercase;
+                        font-size: 30px;
+                        margin-bottom: 20px;
                     }
                     p{
-                        font-size: 16px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -107,6 +109,7 @@
                 color: #fff;
                 transition: all .5s ease-in-out;
                 background-color: transparent;
+                font-size: 18px;
                 &::before{
                     content: '';
                     height: 60%;
@@ -120,10 +123,10 @@
                 &::after{
                     content: '';
                     height: 0%;
-                    width: 3px;
+                    width: 2px;
                     background-color: #FF5D2E;
                     position: absolute;
-                    left: 19.5px;
+                    left: 20px;
                     top: 50%;
                     margin-top:-20px ;
                     transition: all .5s ease-in-out;
@@ -131,8 +134,10 @@
                 &.active, &:hover{
                     background-color:rgba(255,255,255, .2);
                     text-decoration: none;
+                    font-size: 20px;
+
                     &::after{
-                        height: 40%;
+                        height: 60%;
                     }
                 }
             }
@@ -182,6 +187,72 @@
     {
         background-color: #000000;
         border: 2px solid #555555;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .insureAI{
+        .shape{
+            .left{
+                top: -70px;
+            }
+        }
+        .tabLayout{
+            flex-direction: column;
+            ul{
+                max-width: 100%;
+                width: 100% ;
+                padding: 0;
+                margin: 0;
+                li{
+                    margin: 0;
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+            .tab-content{
+                width: 100%;
+            }
+            .insurTitle{
+                .SecTitle{
+                    font-size: 20px;
+                    padding: 15px 20px 0;
+                    span{
+                        padding: 0;
+                        display: inline-flex;
+                    }
+                }
+                span{
+                    padding: 0 20px;
+                }
+
+            }
+        }
+        .insureMore{
+            .btn{
+                font-size: 14px;
+            }
+        }
+        .container{
+            padding: 0;
+            .insuranceSlider{
+                figure{
+                    .secData{
+                        padding: 10px;
+                        margin: 18px 20px 0;
+                        h5{
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+            }
+        }
+
     }
 
 }

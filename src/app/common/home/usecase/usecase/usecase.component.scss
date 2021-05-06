@@ -124,3 +124,38 @@
 .slideList{
     display: flex;
 }
+@media screen and (max-width: 600px) {
+    .usecaseSec{
+        .listing{
+                .rList{
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    figure, figcaption{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    figcaption{
+                        padding: 0;
+                        h3{
+                            font-size: 20px;
+                            margin: 10px 0;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 22px;
+                            margin-bottom: 10px;
+                        }
+                        .learnmore{
+                            margin-bottom: 10px;
+                            .btn{
+                                font-size: 14px;
+                                padding:6px  10px;
+                            }
+                        }
+
+                    }
+                }
+
+        }
+    }
+}

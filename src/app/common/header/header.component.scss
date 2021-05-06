@@ -223,6 +223,7 @@
                             //         width: 2px;
                             //     }
                             // }
+
                         }
                         &.menuMore{
                             flex-direction: column;
@@ -244,7 +245,12 @@
                                 }
                             }
                         }
-
+                        &.request{
+                            margin: 20px 0;
+                            .btn{
+                                margin: 0;
+                            }
+                    }
                     }
                 }
             }

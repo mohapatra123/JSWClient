@@ -166,3 +166,33 @@
     }
 
 }
+@media screen and (max-width: 600px) {
+    .trainingSec{
+        padding: 0;
+        .product{
+            background-size: 200%;
+            background-position: top center;
+            .container{
+                padding: 15px;
+                min-height: 260px;
+                h3{
+                    margin:10px 0;
+                    font-size: 20px;
+                }
+                P{
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+                .learnmore{
+                    .btn{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .SecTitle{
+            margin: 20px 0 40px;
+        }
+    }
+}

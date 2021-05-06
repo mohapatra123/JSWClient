@@ -239,3 +239,33 @@ padding: 50px 0 50px;
     }
 
 }
+@media screen and (max-width: 600px) {
+    .homepage{
+        background-size: 160% auto;
+    }
+    .headerSec{
+        .banner{
+            padding: 0;
+            .container{
+                padding: 120px 10px 0;
+                h1{
+                    font-size: 20px;
+                    text-align: center;
+                }
+                h4{
+                    font-size: 14px;
+                    text-align: center;
+                    line-height: 22px;
+                    padding: 10px 30px;
+                }
+                .bannerClick{
+                    margin-top: 0;
+                    .btn{
+                        font-size: 14px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -80,4 +80,18 @@
         position: absolute;
     }
 }
+@media screen and (max-width: 600px) {
+    .testimonials{
+        .contentpart{
+            .t-card{
+                padding: 30px 15px 50px ;
+                p.happyuserCont{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+}
 
