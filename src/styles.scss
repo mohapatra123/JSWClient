@@ -111,7 +111,7 @@ img{
 .SecTitle{
     color: #002c67;
     margin-bottom: 40px;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     .MoreLight{
         color: $primary;
@@ -145,13 +145,14 @@ overflow: hidden;
             display: flex;
         }
         ul{
-            margin: 0 0 20px;
+            margin: 0px;
             padding: 0;
             list-style: none;
             li{
+                margin-bottom: 6px;
                 a{
                     color: $white;
-                    font-size: 14px;
+                   // font-size: 14px;
                 }
             }
         }

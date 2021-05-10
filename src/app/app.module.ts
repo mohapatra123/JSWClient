@@ -19,6 +19,7 @@ import { ProductsComponent } from './products/products/products.component';
 import { ServicesComponent } from './services/services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { InsureTabComponent } from './common/home/insure-tab/insure-tab.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     SolutionComponent,
     ProductsComponent,
     ServicesComponent,
-    AboutusComponent
+    AboutusComponent,
+    InsureTabComponent
   ],
   imports: [
     BrowserModule,

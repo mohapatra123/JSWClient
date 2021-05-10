@@ -1,0 +1,161 @@
+<section class="insureAI">
+    <!-- <div class="container sticky-top">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="SecTitle">InsureAI <span> - A Data Science Wizard's product</span></h2>
+          <span>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</span>
+          <ul>
+            <li>
+             <a href="">Underwriting & Risk Rating</a>
+            </li>
+            <li>
+              <a href=""> Customer Servicing</a>
+            </li>
+            <li>
+              <a href="">Fraud Detection</a>
+            </li>
+            <li>
+              <a href=""> Claims Management</a>
+            </li>
+          </ul>
+          <button type="submit" class="btn btn-primary">Learn more</button>
+        </div>
+        <div class="col-6 insuranceSlider">
+          <figure>
+            <img src="../assets/images/underwriting-Risk-Rating.jpg" alt="insurance" title="insurance">
+            <div class="secData">
+              <h5>UNDERWRITING & RISK RATING</h5>
+              <p>InsureAI assists underwriters in analysing data, premium prediction and relevant documents generation to speed up the underwriting process.</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div> -->
+    <div class="shape top">
+      <div class="left"></div>
+
+    </div>
+    <div class="insureAIContent">
+      <div  class="container">
+          <h3 class="SecTitle text-center"><strong>Our AI platform solutions</strong></h3>
+        <ul ngbNav #nav2="ngbNav" class="nav-tabs aiPlatfrom">
+            <li ngbNavItem>
+              <a ngbNavLink>InsureAI</a>
+              <ng-template ngbNavContent>
+                <div class="tabLayout">
+                    <ul ngbNav #nav="ngbNav" class="nav-tabs">
+                      <li class="insurTitle"><h2 class="SecTitle">InsureAI <span> - A DSW platform solution</span></h2>
+                        <span>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</span></li>
+                      <li ngbNavItem>
+                        <a ngbNavLink>Underwriting & Risk Rating</a>
+                        <ng-template ngbNavContent>
+                          <div class="list insuranceSlider animate__animated animate__bounceInRight">
+                            <figure>
+                              <img src="../assets/images/Underwriting-risk-rating.png" alt="insurance" title="insurance">
+                              <div class="secData">
+                                <h5>Underwriting and Risk Rating</h5>
+                                <p>InsureAI assists underwriters in analysing data and relevant document generation to speed up the underwriting process. This helps the underwriter to better quantify the risk at the risk definition phase and create better premium prediction matches. InsureAI also ensures mitigates human errors due to intensive routine tasks, data saturation and seasonal business spikes.</p>
+                              </div>
+                            </figure>
+                          </div>
+                        </ng-template>
+                      </li>
+                      <li ngbNavItem>
+                        <a ngbNavLink>Customer Servicing</a>
+                        <ng-template ngbNavContent>
+                          <div class="list insuranceSlider animate__animated animate__bounceInRight">
+                            <figure>
+                              <img src="../assets/images/custSvr.png" alt="insurance" title="insurance">
+                              <div class="secData">
+                                <h5>Customer Service</h5>
+                                <p>Customer interaction is key to brand goodwill, customer retention and repeat business. Understanding customer queries and grievances, and creating fast and easy resolution processes, generates positive customer opinion. InsureAI employs NLP and AI assisted chat-bots to ensure customer service satisfaction.</p>
+                              </div>
+                            </figure>
+                          </div>
+                        </ng-template>
+                      </li>
+                      <li ngbNavItem>
+                        <a ngbNavLink>Fraud Detection</a>
+                        <ng-template ngbNavContent>
+                          <div class="list insuranceSlider animate__animated animate__bounceInRight">
+                            <figure>
+                              <img src="../assets/images/fraud-Detection.png" alt="insurance" title="insurance">
+                              <div class="secData">
+                                <h5>Fraud Prevention</h5>
+                                <p>InsureAI analyzes data streaming from known and unknown sources to flag concealment, suspect claims, transactions, document submissions or patterns of behaviour for immediate action.</p>
+                              </div>
+                            </figure>
+                          </div>
+                        </ng-template>
+                      </li>
+                      <li ngbNavItem>
+                        <a ngbNavLink>Claims Management</a>
+                        <ng-template ngbNavContent>
+                          <div class="list insuranceSlider animate__animated animate__bounceInRight">
+                            <figure>
+                              <img src="../assets/images/claims-Managemetnt.png" alt="insurance" title="insurance">
+                              <div class="secData">
+                                <h5>Claims Management</h5>
+                                <p>Inefficiency in operations from application to premium servicing and claims settlements can impact revenue and customer satisfaction. Insurance application, underwriting and claims settlement processes can be streamlined, made faster and more accurate with InsureAI.</p>
+                              </div>
+                            </figure>
+                          </div>
+                        </ng-template>
+                      </li>
+                      <li><div class="insureMore"><button type="submit" class="btn btn-outline-primary btn-lg">View all use cases</button></div></li>
+                    </ul>
+
+                    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+                  </div>
+
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Logwiz</a>
+              <ng-template ngbNavContent>
+                <div class="rList one">
+                    <figure>
+                      <img src="../assets/images/Logwiz.png" alt="insurance" title="insurance">
+                    </figure>
+                    <figcaption>
+                      <h3>Logwiz  <span>- A DSW platform solution</span></h3>
+                      <p>Integrated Infrastructure and Application Monitoring platform that enables enhanced threat management system with the power of AI.
+                        Gain faster anomaly or threat detection, analysis and response times.</p>
+                      <div class="learnmore">
+                       <button class="btn btn-outline-primary btn-lg">Explore more</button>
+                      </div>
+                    </figcaption>
+
+                </div>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+                <a ngbNavLink>DevOps Workbench</a>
+                <ng-template ngbNavContent>
+                    <div class="rList">
+                        <figure>
+                          <img src="../assets/images/DevOps.png" alt="insurance" title="insurance">
+                        </figure>
+                        <figcaption>
+                         <h3>DevOps Workbench <span>- A DSW platform solution</span></h3>
+                            <p>Stay ahead of the curve. Gain a head start on competition with increased agility, reliability and turnaround times for better business outcomes.</p>
+                            <div class="learnmore">
+                              <button class="btn btn-outline-primary btn-lg">Explore more</button>
+                             </div>
+                          </figcaption>
+
+                    </div>
+                </ng-template>
+              </li>
+          </ul>
+
+          <div [ngbNavOutlet]="nav2" class="mt-2"></div>
+
+  </div>
+
+  </div>
+    <div class="shape">
+      <div class="left"></div>
+
+    </div>
+  </section>
