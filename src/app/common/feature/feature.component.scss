@@ -8,7 +8,7 @@
         flex-direction: column;
         align-items: center;
         &.cango{
-            padding: 90px 0 50px;
+            padding: 60px 0 20px;
             p{
                 text-align: center;
                 //font-size: 18px;
@@ -27,18 +27,17 @@
                 //font-size: 20px;
             }
             .list{
-                margin-top: 30px;
+                margin-top: 20px;
                 .partList{
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     align-items: flex-start;
                     font-size: 14px;
-                    padding: 20px;
-                    background-color: #f2f6fc;
                     margin:  0 15px;
                     height: 100%;
                     .advantage{
-                        width: 100px;
+                        width: 50px;
+                        height: 50px;
 
 
                     }
@@ -48,17 +47,16 @@
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: flex-start;
-                        padding-left: 20px;
 
                         p{
                             font-size: 16px;
                             text-align: left;
-                            color: #333;
+                            color: #373C44
                             //font-weight: 500;
                         }
                         h4{
                             color: #002c67;
-                            font-size: 22px;
+                            font-size: 16px;
                             margin: 10px 0;
                             font-weight: bold;
                             span{

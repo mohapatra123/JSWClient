@@ -20,6 +20,8 @@ import { ServicesComponent } from './services/services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { InsureTabComponent } from './common/home/insure-tab/insure-tab.component';
+import { ProductComponent } from './common/home/product/product.component';
+import { TestDriveComponent } from './common/home/test-drive/test-drive.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { InsureTabComponent } from './common/home/insure-tab/insure-tab.componen
     ProductsComponent,
     ServicesComponent,
     AboutusComponent,
-    InsureTabComponent
+    InsureTabComponent,
+    ProductComponent,
+    TestDriveComponent
   ],
   imports: [
     BrowserModule,

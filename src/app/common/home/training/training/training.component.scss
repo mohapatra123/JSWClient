@@ -1,5 +1,5 @@
 .trainingSec{
-    padding: 150px 0 0px;
+    padding: 80px 0 0px;
     background-image: url(../../../../../assets/images/Grey-lines-behind-product-section.png);
     background-color: #fff;
     background-position: -700px 0;
@@ -18,31 +18,7 @@
 
         }
 
-.product{
-    background-image: url(../../../../../assets/images/product-section.png);
-    background-position:center right;
-    background-repeat: no-repeat;
-    background-size: 1200px;
-    .container{
-        min-height: 450px;
-        padding: 100px 60px 60px 280px;
-        h3{
-            color: #FF5D2E;
-            font-weight: 800;
-            margin-bottom: 30px;
-        }
-        p{
-            color: #fff;
-            //font-size: 20px;
-            line-height: 26px;
-            margin-bottom: 60px;
-        }
-        .btn{
-            border-color: #fff;
-            color: #fff;
-        }
-    }
-}
+
 }
 .traniSec{
     background-color: #fff;

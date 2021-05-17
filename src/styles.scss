@@ -86,87 +86,53 @@ img{
         height: 80px;
         width: 80px;
         &.agnostic{
-            background-position: -194px -156px;
+            background-position: -252px -7px;
+            //background-position: -194px -156px;
         }
         &.robust{
-            background-position: -10px -155px;
+            background-position: -316px -7px;
+           // background-position: -10px -155px;
         }
         &.ethical{
-            background-position: -488px -156px;
+            background-position: -378px -7px;
+           // background-position: -488px -156px;
         }
         &.respons{
-            background-position:-390px -163px;
+            background-position:-442px -7px;
+            //background-position:-390px -163px;
         }
         &.training{
-            background-position: -103px -156px;
+            background-position:-504px -7px;
+           // background-position: -103px -156px;
         }
         &.domain{
-            background-position:-291px -156px;
+            background-position:-570px -7px;
+           // background-position:-291px -156px;
         }
 
     }
 
 
 }
+.pageTitl{
+    font-size: 36px;
+    font-weight: bold;
+}
 .SecTitle{
     color: #002c67;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
     .MoreLight{
         color: #002c67;
     }
 }
-footer{
-overflow: hidden;
-    .footerPart{
-   position: relative;
-   overflow: hidden;
-    padding: 100px 0 0px;
-    z-index: 2;
-    background: #fff;
-    .footerlinks{
-    background-color: $secondary;
-    padding-top: 40px;
-    }
-    .logo{
-        width: 200px;
-        img{
-            max-width: 100%;
+.pageBanner{
+    .shape{
+        &::before{
+            border-bottom: 100px solid #ffffff;
         }
     }
-    .qucklink{
-        margin-bottom: 30px;
-        flex: 0 0 20%;
-        max-width: 20%;
-        strong{
-            color: $primary;
-            margin-bottom: 10px;
-            display: flex;
-        }
-        ul{
-            margin: 0px;
-            padding: 0;
-            list-style: none;
-            li{
-                margin-bottom: 6px;
-                a{
-                    color: $white;
-                   // font-size: 14px;
-                }
-            }
-        }
-        p{
-            color: $white;
-            margin-bottom: 10px;
-        }
-        .form-control{
-            background: transparent;
-            border-color: $primary;
-            margin: 10px 0;
-        }
-    }
-}
 }
 .shape{
     position: relative;

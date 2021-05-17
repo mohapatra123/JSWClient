@@ -1,0 +1,50 @@
+.pageBanner{
+    background-image: url(../../assets/images/aboutBnr.png);
+    background-color: #000926;
+    //background-size: 100%;
+    background-position:left ;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    .pageTitl{
+        color: #fff;
+        text-align: center;
+        padding: 130px 0 180px;
+    }
+}
+.aboutusContSec{
+    background-color: #fff;
+    padding: 50px 0;
+    .everyone{
+        text-align: center;
+    }
+}
+.aboutsecOne{
+    position: relative;
+    padding: 30px 0;
+    margin: 100px 0 80px;
+    &::before{
+        content: '';
+        height: 100%;
+        width: 30%;
+        border:4px solid #FF5D2E;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: none;
+    }
+}
+.aboutsecTwo{
+    position: relative;
+    padding: 30px 0;
+    margin: 80px 0;
+    &::before{
+        content: '';
+        height: 100%;
+        width: 30%;
+        border:4px solid #FF5D2E;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-right: none;
+    }
+}

@@ -44,8 +44,9 @@
               <ng-template ngbNavContent>
                 <div class="tabLayout">
                     <ul ngbNav #nav="ngbNav" class="nav-tabs">
-                      <li class="insurTitle"><h2 class="SecTitle">InsureAI </h2>
-                        <span>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</span></li>
+                      <li class="insurTitle">
+                        <!-- <h2 class="SecTitle">InsureAI </h2> -->
+                        <h5>Harnessing the power of Data, employing Artificial Intelligence & Machine Learning</h5></li>
                       <li ngbNavItem>
                         <a ngbNavLink>Underwriting & Risk Rating</a>
                         <ng-template ngbNavContent>
@@ -114,46 +115,50 @@
 
               </ng-template>
             </li>
-            <li ngbNavItem>
-              <a ngbNavLink>Logwiz</a>
-              <ng-template ngbNavContent>
-                <div class="rList one">
-                    <figure>
-                      <img src="../assets/images/Logwiz.png" alt="insurance" title="insurance">
-                    </figure>
-                    <figcaption>
-                      <h3>Logwiz</h3>
-                      <p>Integrated Infrastructure and Application Monitoring platform that enables enhanced threat management system with the power of AI.
-                        Gain faster anomaly or threat detection, analysis and response times.</p>
-                      <div class="learnmore">
-                       <button class="btn btn-outline-primary btn-lg">Explore more</button>
-                      </div>
-                    </figcaption>
 
-                </div>
-              </ng-template>
-            </li>
             <li ngbNavItem>
                 <a ngbNavLink>DevOps Insights Workbench</a>
                 <ng-template ngbNavContent>
                     <div class="rList">
-                        <figure>
-                          <img src="../assets/images/DevOps.png" alt="insurance" title="insurance">
-                        </figure>
+
                         <figcaption>
-                         <h3>DevOps Insights Workbench </h3>
+                          <h5>Leveraging DevOps & continuously improve Business outcome</h5>
+                         <!-- <h3>DevOps Workbench </h3> -->
                             <p>Stay ahead of the curve. Gain a head start on competition with increased agility, reliability and turnaround times for better business outcomes.</p>
                             <div class="learnmore">
                               <button class="btn btn-outline-primary btn-lg">Explore more</button>
                              </div>
                           </figcaption>
+                          <figure class="animate__animated animate__bounceInRight">
+                            <img src="../assets/images/DevOps.png" alt="DevOps Workbench" title="DevOps Workbench" >
+                          </figure>
 
                     </div>
                 </ng-template>
               </li>
+              <li ngbNavItem>
+                <a ngbNavLink>Logwiz</a>
+                <ng-template ngbNavContent>
+                  <div class="rList one">
+                    <figcaption>
+                      <h5>Leveraging AI features Integrated Infrastructure and Application Monitoring platform for Enterprise.</h5>
+
+                        <p>Integrated Infrastructure and Application Monitoring platform that enables enhanced threat management system with the power of AI.
+                          Gain faster anomaly or threat detection, analysis and response times.</p>
+                        <div class="learnmore">
+                         <button class="btn btn-outline-primary btn-lg">Explore more</button>
+                        </div>
+                      </figcaption>
+                      <figure class="animate__animated animate__bounceInRight">
+                        <img src="../assets/images/Logwiz.png" alt="Logwiz" title="Logwiz" >
+                      </figure>
+
+                  </div>
+                </ng-template>
+              </li>
           </ul>
 
-          <div [ngbNavOutlet]="nav2" class="mt-2"></div>
+          <div [ngbNavOutlet]="nav2" class="mt-2 aiPlatfromCont"></div>
 
   </div>
 
