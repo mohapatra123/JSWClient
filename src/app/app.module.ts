@@ -22,6 +22,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { InsureTabComponent } from './common/home/insure-tab/insure-tab.component';
 import { ProductComponent } from './common/home/product/product.component';
 import { TestDriveComponent } from './common/home/test-drive/test-drive.component';
+//import { InsureAiComponent } from './common/solution/insure-ai/insure-ai.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TestDriveComponent } from './common/home/test-drive/test-drive.componen
     AboutusComponent,
     InsureTabComponent,
     ProductComponent,
-    TestDriveComponent
+    TestDriveComponent,
+    //InsureAiComponent
   ],
   imports: [
     BrowserModule,
