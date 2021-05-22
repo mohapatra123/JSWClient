@@ -46,3 +46,21 @@
 
     }
     }
+    @media screen and (max-width: 600px) {
+        .footerDemo{
+            .container{
+                .footerDemoinn{
+                    h3{
+                        font-size: 18px;
+                        width: 300px;
+                        text-align: center;
+                    }
+                    p{
+                        padding: 20px 40px;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }

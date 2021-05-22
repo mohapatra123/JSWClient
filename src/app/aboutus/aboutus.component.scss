@@ -231,3 +231,83 @@
 
     }
     }
+    @media screen and (max-width: 600px) {
+        .pageBanner{
+            background-size: 100% 100%;
+            object-fit: cover;
+            .pageTitl{
+                padding: 30px 0 130px;
+                font-size: 25px;
+            }
+        }
+        .tcp{
+            .container{
+                .technologypartners{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0 0 10px;
+
+                    .logo{
+                        padding: 0 10px 10px;
+                    }
+                }
+            }
+        }
+        .ourTeam{
+            .container{
+                .teams{
+                    display:flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 30px 0 0;
+                    .teamMember{
+                        width: 45%;
+                        margin: 0 2% 20px;
+                        figure{
+                            height: auto;
+                            min-height: 190px;
+                        }
+                    }
+                }
+                .SecTitle{
+                    margin: 20px 0 0;
+                }
+            }
+
+        }
+        .footerDemo{
+            .container{
+                padding: 30px 0 130px;
+                .footerDemoinn{
+                    h3{
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                    .rquBtn{
+                        .btn{
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .aboutusContSec{
+            padding: 0 0 30px;
+        }
+        .aboutsecOne, .aboutsecTwo{
+            margin: 50px 0;
+            div[class*="col-"]{
+                flex: 0 0 100%;
+                max-width: 100%;
+                background-color: #fff;
+            }
+            .SecTitle{
+                margin: 20px 0;
+            }
+        }
+        .aboutsecTwo{
+            .intelligent{
+                flex-direction: column-reverse;
+            }
+        }
+    }
