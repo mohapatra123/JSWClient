@@ -1,14 +1,21 @@
 .homepage{
-    background-image: url(../../../assets/images/Banner-bg-image.png);
-    background-position: center top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    margin-top: -100px;
+    // background-image: url(../../../assets/images/homeBanner.svg);
+    // background-position: center top;
+    // //background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-size: 100% auto;
+    // margin-top: -100px;
 
 }
 .headerSec{
 position: relative;
+background-image: url(../../../assets/images/homeBanner.svg);
+background-color: #fff;
+background-position: center top;
+//background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+margin-top: -70px;
 .headerbanner{
     width: 100%;
     position: absolute;
@@ -17,12 +24,70 @@ position: relative;
     z-index: 1;
 
 }
+.shape{
+    background-color: #fff;
+    &::before{
+        border-bottom: 100px solid #fff;
+        top: -115px;
+    }
+    .line{
+        position: relative;
+        &::before{
+            content: '';
+            height: 1px;
+            width: 170px;
+            background-color: #FF5D2E;
+            position: absolute;
+            left: -220px;
+            top: 70px;
+            display: flex;
+        }
+        &::after{
+            content: '';
+            height: 1px;
+            width: 170px;
+            background-color: #FF5D2E;
+            position: absolute;
+            left: -260px;
+            top: 46px;
+            display: flex;
+        }
+    }
+    .left{
+        position: relative;
+        top: -48px;
+        &::before{
+            top: 27px;
+        }
+    }
+    .right{
+        background-color:rgba(0, 83, 195, .8);
+        top: -135px;
+        &::before{
+            background-color:rgba(82, 197, 233, .8);
+        }
+        .line{
+            &::before{
+                background-color: #53B8FC;
+                left: 290px;
+                top: 0px;
+
+            }
+            &::after{
+                background-color: #53B8FC;
+                left: 237px;
+                top: -26px;
+            }
+        }
+
+    }
+}
 .banner{
     position: relative;
     z-index: 2;
-    padding: 0px 0 100px;
+    //padding: 0px 0 100px;
     .container{
-        padding: 270px 0 150px;
+        padding: 270px 0 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,6 +100,7 @@ position: relative;
             color: #fff;
             line-height: 30px;
             padding: 20px 0 30px;
+            text-align: center;
         }
     }
     .bannerClick{
@@ -54,10 +120,11 @@ position: relative;
         background-size: 160% auto;
     }
     .headerSec{
+        background-size: cover;
         .banner{
             padding: 0;
             .container{
-                padding: 120px 10px 0;
+                padding: 100px 10px 135px;
                 h1{
                     font-size: 20px;
                     text-align: center;
@@ -75,6 +142,41 @@ position: relative;
                         margin-bottom: 30px;
                     }
                 }
+            }
+        }
+        .shape{
+            &::before{
+                top: -99px;
+            }
+            .right{
+                height: 30px;
+                width: 100px;
+                top: -112px;
+                &::before{
+                    height: 25px;
+                    right: 30px;
+                }
+                .line{
+                    &::before{
+                        left: 120px;
+                    }
+                    &::after{
+                        left: 90px;
+                        top: -14px;
+                    }
+                }
+            }
+            .line{
+                &::before{
+                    width: 60px;
+
+                }
+                &::after{
+                    width: 60px;
+                }
+
+
+
             }
         }
     }

@@ -261,8 +261,36 @@ img{
         }
     }
 }
+.pageBanner{
+    height: 390px;
+    overflow: hidden;
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 @media screen and (max-width: 600px) {
     .SecTitle{
         font-size: 18px;
+    }
+    .pageBanner {
+        height: 250px;
+        background-position: top !important;
+        background-size: 100%;
+        .pageTitl {
+            font-size: 24px;
+        }
+    }
+    .shape{
+        .right{
+            height: 35px;
+            width: 150px;
+            &::before{
+                height: 30px;
+                top: -12px;
+            }
+        }
     }
 }

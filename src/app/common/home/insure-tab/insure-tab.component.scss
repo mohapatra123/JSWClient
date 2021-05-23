@@ -6,7 +6,7 @@
      background-color: #fff;
      .insureAIContent{
          background: #000926;
-         padding: 20px 0 0    ;
+         padding: 0   ;
      }
      .scroolPosition{
          position: relative;
@@ -155,7 +155,7 @@
              margin-bottom: 5px;
              a{
                  width: 60%;
-                 padding:10px 20px;
+                 padding:10px 30px;
                  border-radius: 0px;
                  border: none;
                  position: relative;
@@ -170,7 +170,7 @@
                      width: 2px;
                      background-color: #fff;
                      position: absolute;
-                     left: 10px;
+                     left: 15px;
                      top: 50%;
                      margin-top:-15px ;
                  }
@@ -180,7 +180,7 @@
                      width: 2px;
                      background-color: #FF5D2E;
                      position: absolute;
-                     left: 10px;
+                     left: 15px;
                      top: 50%;
                      margin-top:-15px ;
                      transition: all .5s ease-in-out;
@@ -205,6 +205,7 @@
  }
  .aiPlatfromCont{
      padding: 0 60px;
+     height: 320px;
  }
  .scrollspy-example {
      position: relative;
@@ -257,7 +258,7 @@
         figcaption{
             display: flex;
             flex-direction: column;
-            max-width: 55%;
+            max-width: 50%;
             padding-right: 100px;
             h3{
                font-weight: bold;
@@ -288,7 +289,7 @@
             position: relative;
             transition: all .5s ease-in-out;
             overflow: hidden;
-            max-width:45%;
+            max-width:50%;
             height: auto;
             box-shadow: 0 0 20px #007bff;
             img{
@@ -402,6 +403,14 @@
                      }
                  }
 
+             }
+             .nav-tabs.aiPlatfrom{
+                justify-content: flex-start;
+                li{
+                    .nav-link{
+                        font-size: 14px;
+                    }
+                }
              }
          }
 
