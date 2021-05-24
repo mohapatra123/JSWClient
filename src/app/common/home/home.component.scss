@@ -34,21 +34,21 @@ margin-top: -70px;
         position: relative;
         &::before{
             content: '';
-            height: 1px;
+            height: 1.5px;
             width: 170px;
             background-color: #FF5D2E;
             position: absolute;
-            left: -220px;
+            left: -160px;
             top: 70px;
             display: flex;
         }
         &::after{
             content: '';
-            height: 1px;
+            height: 1.5px;
             width: 170px;
             background-color: #FF5D2E;
             position: absolute;
-            left: -260px;
+            left: -190px;
             top: 46px;
             display: flex;
         }
@@ -69,13 +69,13 @@ margin-top: -70px;
         .line{
             &::before{
                 background-color: #53B8FC;
-                left: 290px;
+                left: 220px;
                 top: 0px;
 
             }
             &::after{
                 background-color: #53B8FC;
-                left: 237px;
+                left: 180px;
                 top: -26px;
             }
         }
