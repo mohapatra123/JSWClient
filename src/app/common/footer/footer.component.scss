@@ -1,9 +1,10 @@
 footer{
-    overflow: hidden;
+
     .footerPart{
         position: relative;
         overflow: hidden;
-         padding: 0;
+        padding: 120px 0 20px;
+        margin-top: -80px;
          z-index: 2;
          background: #000926;
          .footerlinks{
@@ -94,6 +95,7 @@ footer{
 @media screen and (max-width: 600px) {
     .footerDemo{
         padding: 20px 0;
+
         .container{
             .footerDemoinn{
                 h3{

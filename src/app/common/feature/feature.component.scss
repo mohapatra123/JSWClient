@@ -1,12 +1,17 @@
 .features{
-    background: #fff;
-    z-index: 9;
     position: relative;
     padding:0;
+    top: -80px;
+    .container{
+        padding: 60px 0 0;
+    }
     .contentSec{
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+
+        z-index: 3;
         &.cango{
             padding: 0px 0 20px;
             p{
@@ -71,6 +76,87 @@
             }
 
         }
+    }
+    .maskGrid{
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        transform: skewY(-4deg);
+        .line{
+            position: relative;
+            &::before{
+                content: '';
+                height: 2px;
+                width: 50%;
+                background-color: #FF5D2E;
+                position: absolute;
+                left: 106%;
+                top: 0;
+                display: flex;
+            }
+            &::after{
+                content: '';
+                height: 2px;
+                width: 50%;
+                background-color: #FF5D2E;
+                position: absolute;
+                left: 88%;
+                top: -20px;
+                display: flex;
+            }
+        }
+
+        .left {
+            background-color: rgba(255, 172, 64, 0.871);
+            border-radius: 0 33px 33px 0;
+            height: 47px;
+            left: 0px;
+            position: absolute;
+            top:-22px;
+            width: 15%;
+            &::before{
+                content: '';
+            background-color: rgba(255,102,0,0.6);
+            border-radius:0  33px 33px 0;
+            height: 40px;
+            left: 0;
+            position: absolute;
+            width: 72%;
+            top: -20px;
+                }
+                .line{
+
+                }
+             }
+             .right {
+                background-color:rgba(0, 83, 195, .8);
+                border-radius: 33px 0 0 33px;
+                height: 47px;
+                right: 0px;
+                position: absolute;
+                top:-25px;
+                width: 15%;
+                &::before{
+                content: '';
+                background-color:rgba(82, 197, 233, .6);
+                border-radius:33px 0 0 33px;
+                height: 40px;
+                right: 0;
+                position: absolute;
+                width: 72%;
+                top: 24px;
+                    }
+                    .line{
+                        &::before{
+                            background-color:#53B8FC;
+                            right: 106%;
+                            left: unset;
+                        }
+                        &::after{
+                            display: none;
+                        }
+                    }
+                 }
     }
 }
 @media screen and (max-width: 600px) {

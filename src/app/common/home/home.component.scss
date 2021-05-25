@@ -1,21 +1,13 @@
-.homepage{
-    // background-image: url(../../../assets/images/homeBanner.svg);
-    // background-position: center top;
-    // //background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-size: 100% auto;
-    // margin-top: -100px;
 
-}
 .headerSec{
 position: relative;
-background-image: url(../../../assets/images/homeBanner.svg);
+background-image: url(../../../assets/images/Banner-bg-image.png);
 background-color: #fff;
 background-position: center top;
 //background-attachment: fixed;
 background-repeat: no-repeat;
-background-size: 100% 100%;
-margin-top: -70px;
+background-size: 100%;
+//margin-top: -70px;
 .headerbanner{
     width: 100%;
     position: absolute;
@@ -24,83 +16,28 @@ margin-top: -70px;
     z-index: 1;
 
 }
-.shape{
-    background-color: #fff;
-    &::before{
-        border-bottom: 100px solid #fff;
-        top: -115px;
-    }
-    .line{
-        position: relative;
-        &::before{
-            content: '';
-            height: 1.5px;
-            width: 170px;
-            background-color: #FF5D2E;
-            position: absolute;
-            left: -160px;
-            top: 70px;
-            display: flex;
-        }
-        &::after{
-            content: '';
-            height: 1.5px;
-            width: 170px;
-            background-color: #FF5D2E;
-            position: absolute;
-            left: -190px;
-            top: 46px;
-            display: flex;
-        }
-    }
-    .left{
-        position: relative;
-        top: -48px;
-        &::before{
-            top: 27px;
-        }
-    }
-    .right{
-        background-color:rgba(0, 83, 195, .8);
-        top: -135px;
-        &::before{
-            background-color:rgba(82, 197, 233, .8);
-        }
-        .line{
-            &::before{
-                background-color: #53B8FC;
-                left: 220px;
-                top: 0px;
 
-            }
-            &::after{
-                background-color: #53B8FC;
-                left: 180px;
-                top: -26px;
-            }
-        }
-
-    }
-}
 .banner{
     position: relative;
     z-index: 2;
     //padding: 0px 0 100px;
     .container{
-        padding: 270px 0 200px;
+        padding: 170px 0 180px;
         display: flex;
         flex-direction: column;
         align-items: center;
         h1{
-            color: #ff5d2e;
+            color: #fff;
             font-weight: bolder;
+            font-size: 2.5rem;
         }
         h4{
             font-weight: normal;
             color: #fff;
-            line-height: 30px;
+            line-height: 40px;
             padding: 20px 0 30px;
             text-align: center;
+            font-size: 1.8rem;
         }
     }
     .bannerClick{
@@ -108,8 +45,8 @@ margin-top: -70px;
         .btn{
             padding-left: 30px;
             padding-right: 30px;
-            border-color: #fff;
-            color: #fff;
+            // border-color: #fff;
+            // color: #fff;
         }
     }
 
@@ -144,40 +81,6 @@ margin-top: -70px;
                 }
             }
         }
-        .shape{
-            &::before{
-                top: -99px;
-            }
-            .right{
-                height: 30px;
-                width: 100px;
-                top: -112px;
-                &::before{
-                    height: 25px;
-                    right: 30px;
-                }
-                .line{
-                    &::before{
-                        left: 120px;
-                    }
-                    &::after{
-                        left: 90px;
-                        top: -14px;
-                    }
-                }
-            }
-            .line{
-                &::before{
-                    width: 60px;
 
-                }
-                &::after{
-                    width: 60px;
-                }
-
-
-
-            }
-        }
     }
 }

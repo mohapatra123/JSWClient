@@ -11,9 +11,61 @@
         padding: 130px 0 180px;
     }
 }
+.pageLayout{
+    position: relative;
+    .maskGrid{
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        transform: skewY(-4deg);
+        position: relative;
+        z-index: 1;
+        .left {
+            background-color: rgba(255, 172, 64, 0.871);
+            border-radius: 0 33px 33px 0;
+            height: 47px;
+            left: 0px;
+            position: absolute;
+            bottom:0px;
+            width: 15%;
+            &::before{
+                content: '';
+            background-color: rgba(255,102,0,0.6);
+            border-radius:0  33px 33px 0;
+            height: 40px;
+            left: 0;
+            position: absolute;
+            width: 72%;
+            bottom:26px;
+                }
+             }
+             .right {
+                background-color: rgba(255, 172, 64, 0.871);
+                border-radius:33px 0 0 33px;
+                height: 47px;
+                right: 0px;
+                position: absolute;
+                top:0px;
+                width: 15%;
+                &::before{
+                    content: '';
+                background-color: rgba(255,102,0,0.6);
+                border-radius:33px 0 0 33px;
+                height: 40px;
+                right: 0;
+                position: absolute;
+                width: 72%;
+                top:24px;
+                    }
+                 }
+    }
+}
 .aboutusContSec{
-    background-color: #fff;
+    //background-color: #fff;
     padding: 50px 0;
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
     .everyone{
         text-align: center;
     }
@@ -22,6 +74,7 @@
     position: relative;
     padding: 30px 0;
     margin: 100px 0 80px;
+    z-index: 2;
     &::before{
         content: '';
         height: 100%;
@@ -50,7 +103,8 @@
 }
 .tcp{
     background-color: #F2F6FC;
-
+    position: relative;
+    z-index: 2;
     .container{
         display: flex;
         flex-direction: column;
@@ -83,6 +137,8 @@
 .ourTeam{
     background-color: #fff;
     padding:0 0 50px;
+    position: relative;
+    z-index: 4;
     .container{
         display: flex;
         align-items: center;
@@ -104,7 +160,7 @@
                 figure{
                     margin: 0;
                     position: relative;
-                    height: 250px;
+                    max-width: 250px;
                     img{
                         height: 100%;
                         width: 100%;
@@ -135,13 +191,19 @@
 
                 }
                 figcaption{
-                    background-color: #f0f0f0;
-                    position: absolute;
-                    bottom: -100%;
+                    background-color: #000926;
+                    position: relative;
+                    bottom:0;
                     width: 100%;
-                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
                     padding: 10px;
                     transition: all .6s ease-in-out;
+                    color: #fff;
+                    height: 83px;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
                     h5{
                         font-size: 16px;
                     }
@@ -191,12 +253,20 @@
 }
 .footerDemo{
     position: relative;
-    background-color: #F2F6FC;
     padding-top: 50px;
     padding:0 ;
+    margin-top: -50px;
+    .maskGrid{
+        height: 100%;
+        width: 100%;
+        background-color: #F2F6FC;
+        transform: skewY(-4deg);
+        position: relative;
+        z-index: 3;
+    }
     .container{
         position: relative;
-        padding:80px 0 150px;
+        padding:100px 0 80px;
         z-index: 9;
         .footerDemoinn{
             display: flex;

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$body-bg:    #F3F4F8 !default;
+$body-bg:    #fff !default;
 $body-color: #373C44 !default;
 $primary:    #FF5D2E !default;
 $secondary:  #000926 !default;
@@ -138,6 +138,13 @@ img{
         }
     }
 }
+.backGroundMask{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
 .shape{
     position: relative;
     z-index: 2;
@@ -145,7 +152,7 @@ img{
         content: '';
         width: 0;
         height: 0;
-        border-left: 1600px solid transparent;
+        border-left: 1700px solid transparent;
         border-right: 0px solid transparent;
         border-bottom: 100px solid $secondary;
         display: flex;

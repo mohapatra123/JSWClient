@@ -8,6 +8,9 @@ import { ServicesComponent } from './services/services/services.component';
 import { SolutionComponent } from './solution/solution/solution.component';
 import { TrainingComponent } from './training/training/training.component';
 import { InsureaiComponent } from './common/solution/insureAI/insureai/insureai.component';
+import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypolicies.component';
+import { TermsandconditionsComponent} from './policies/termsandconditions/termsandconditions.component';
+import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +20,10 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent},
   { path: 'services', component: ServicesComponent},
   { path: 'training', component: TrainingComponent},
-  { path: 'aboutus', component: AboutusComponent}
+  { path: 'aboutus', component: AboutusComponent},
+  { path: 'privacypolicies', component: PrivacypoliciesComponent},
+  { path: 'termsandconditions', component: TermsandconditionsComponent},
+  { path: 'contactUs', component: ContactUsComponent},
 ];
 
 @NgModule({

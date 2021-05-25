@@ -25,6 +25,9 @@ import { TestDriveComponent } from './common/home/test-drive/test-drive.componen
 import { InsureaiComponent } from './common/solution/insureAI/insureai/insureai.component';
 import { LogmanagementComponent } from './common/solution/logManagement/logmanagement/logmanagement.component';
 import { DevOpsWorkbenchComponent } from './common/solution/devOpsWorkbench/dev-ops-workbench/dev-ops-workbench.component';
+import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypolicies.component';
+import { TermsandconditionsComponent } from './policies/termsandconditions/termsandconditions.component';
+import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -50,6 +53,9 @@ import { DevOpsWorkbenchComponent } from './common/solution/devOpsWorkbench/dev-
     InsureaiComponent,
     LogmanagementComponent,
     DevOpsWorkbenchComponent,
+    PrivacypoliciesComponent,
+    TermsandconditionsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
