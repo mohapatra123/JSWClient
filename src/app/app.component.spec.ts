@@ -12,6 +12,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
+    window.scroll(0,0);
   });
 
   it('should create the app', () => {
@@ -32,4 +33,5 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('jsw app is running!');
   });
+
 });

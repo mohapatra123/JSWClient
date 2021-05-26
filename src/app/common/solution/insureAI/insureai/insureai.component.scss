@@ -2,15 +2,15 @@
     background-image: url(../../../../../assets/images/insureBnr.png);
     background-color: #000926;
     //background-size: 100%;
-    background-position:left ;
+    background-position:left top ;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-size: 55%;
     .pageTitl{
         color: #fff;
         text-align: center;
         padding: 130px 0 180px;
         span{
-            font-size: 16px;
             display: flex;
             justify-content: center;
             font-weight: normal;
@@ -218,7 +218,7 @@
                         color: #002c67;
                         transition: all .5s ease-in-out;
                         &.active, &:hover{
-                            background-color:#002c67;
+                            background-color:#000926;
                             border-left: 3px solid #e13200;
                             color: #fff;
                         }
