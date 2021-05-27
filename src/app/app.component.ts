@@ -8,6 +8,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   title = 'jsw';
 
-
+  onDeactivate() {
+    document.body.scrollTop = 0;
+    // Alternatively, you can scroll to top by using this other call:
+    // window.scrollTo(0, 0)
+  }
 }
 
