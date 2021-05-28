@@ -38,6 +38,7 @@ sans-serif;
 @import url(../src/assets/webfont/webRbtFont.scss);
 body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 @media (min-width: 1200px){
     .container-xl, .container-lg, .container-md, .container-sm, .container {
