@@ -3,7 +3,7 @@
     padding:0;
     top: -80px;
     .container{
-        padding: 60px 0 0;
+        padding: 80px 0 0;
     }
     .contentSec{
         display: flex;
@@ -134,7 +134,7 @@
                 height: 47px;
                 right: 0px;
                 position: absolute;
-                top:-25px;
+                top:-21px;
                 width: 15%;
                 &::before{
                 content: '';
@@ -144,13 +144,14 @@
                 right: 0;
                 position: absolute;
                 width: 72%;
-                top: 24px;
+                top: -20px;
                     }
                     .line{
                         &::before{
                             background-color:#53B8FC;
                             right: 106%;
                             left: unset;
+                            top: 1px;
                         }
                         &::after{
                             display: none;

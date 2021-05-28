@@ -9,7 +9,7 @@
     .pageTitl{
         color: #fff;
         text-align: center;
-        padding: 130px 0 180px;
+        padding: 100px 0 210px;
         span{
             display: flex;
             justify-content: center;
@@ -71,10 +71,11 @@
 .aboutusContSec{
     //background-color: #fff;
     position: relative;
-    padding: 50px 0 30px;
+    padding: 20px 0 30px;
     margin-top: -100px;
     .everyone{
         text-align: center;
+        margin: 60px 0;
     }
 
     .container{
@@ -164,7 +165,14 @@
                 font-weight: 800;
                 margin-bottom: 20px;
             }
-
+            p{
+                font-size: 22px;
+                line-height: 35px;
+                padding: 20px 220px;
+                color: #888;
+                display: flex;
+                text-align: center;
+            }
             .rquBtn{
                 .btn{
                     border-width: 3px;
@@ -282,6 +290,7 @@
                 //border-top: 1px solid #002c67;
             }
         }
+
 
     }
     @media screen and (max-width: 600px) {
