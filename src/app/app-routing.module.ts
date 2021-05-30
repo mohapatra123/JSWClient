@@ -11,6 +11,7 @@ import { InsureaiComponent } from './common/solution/insureAI/insureai/insureai.
 import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypolicies.component';
 import { TermsandconditionsComponent} from './policies/termsandconditions/termsandconditions.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
+import {ThankYouComponent} from './thankYou/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'privacypolicies', component: PrivacypoliciesComponent},
   { path: 'termsandconditions', component: TermsandconditionsComponent},
   { path: 'contactUs', component: ContactUsComponent},
+  { path: 'thankyou', component:ThankYouComponent},
 ];
 
 @NgModule({

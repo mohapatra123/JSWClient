@@ -28,6 +28,7 @@ import { DevOpsWorkbenchComponent } from './common/solution/devOpsWorkbench/dev-
 import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypolicies.component';
 import { TermsandconditionsComponent } from './policies/termsandconditions/termsandconditions.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
+import { ThankYouComponent } from './thankYou/thank-you/thank-you.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { ContactUsComponent } from './contact/contact-us/contact-us.component';
     PrivacypoliciesComponent,
     TermsandconditionsComponent,
     ContactUsComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,
