@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
 
   @ViewChild('targetUI') TargetUI!: ElementRef;
 
-  scrollToElement($element: any): void {        
-    this.TargetUI.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  scrollToElement($element: any): void {
+    this.TargetUI.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end'});
   }
 
   ngOnInit(): void {
