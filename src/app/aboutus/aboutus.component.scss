@@ -331,10 +331,17 @@
         //         font-size: 25px;
         //     }
         // }
+        .aboutusContSec{
+            .everyone{
+                padding-top: 60px;
+            }
+        }
         .tcp{
 
             .container{
-
+                .SecTitle{
+                    text-align: center;
+                }
                 .technologypartners{
                     flex-wrap: wrap;
                     justify-content: center;
@@ -360,6 +367,14 @@
                             height: auto;
                             min-height: 190px;
                         }
+                        figcaption{
+                            h5{
+                                font-size: 14px;
+                            }
+                            p{
+                                font-size: 10px;
+                            }
+                        }
                     }
                 }
                 .SecTitle{
@@ -370,7 +385,7 @@
         }
         .footerDemo{
             .container{
-                padding: 30px 0 130px;
+                padding: 80px 0;
                 .footerDemoinn{
                     h3{
                         font-size: 16px;
@@ -379,6 +394,7 @@
                     .rquBtn{
                         .btn{
                             width: auto;
+                            font-size: 1rem;
                         }
                     }
                 }

@@ -140,9 +140,21 @@
             }
         }
     }
+.carouselHeight{
+    height: 350px !important;
+}
 
 }
+.mob{
+    display: none;
+}
 @media screen and (max-width: 600px) {
+    .mob{
+        display: block;
+    }
+    .web{
+        display: none;
+    }
     .trainingSec{
         padding: 0;
         .product{
@@ -170,5 +182,13 @@
         .SecTitle{
             margin: 20px 0 40px;
         }
+    }
+
+
+    .carousel-cells .carousel-cell{
+        display: none !important;
+    }
+    .carousel-container{
+        background: red;
     }
 }

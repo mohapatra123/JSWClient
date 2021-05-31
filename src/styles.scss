@@ -269,6 +269,15 @@ img{
             }
         }
 }
+.resSec{
+    .resourceslist{
+        .carousel-cells {
+            .carousel-cell{
+                padding: 10px;
+            }
+            }
+}
+}
 .tabLayout{
     ul{
         li{
@@ -288,7 +297,7 @@ img{
 }
 @media screen and (max-width: 600px) {
     .SecTitle{
-        font-size: 18px;
+        font-size: 24px;
     }
     .pageBanner {
         height: 250px;
@@ -308,4 +317,9 @@ img{
             }
         }
     }
+    .carousel-cells {
+        .carousel-cell{
+         width: 300px;
+        }
+        }
 }

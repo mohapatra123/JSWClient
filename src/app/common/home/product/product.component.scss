@@ -78,3 +78,37 @@
         }
     }
 }
+@media screen and (max-width: 600px) {
+        .product{
+
+            .container{
+                padding: 30px 15px 15px;
+                min-height: auto;
+                &::before{
+                    display: none;
+                }
+                h3{
+                    font-size: 20px;
+                }
+                ul{
+                    max-width: 100%;
+                    li{
+                        a{
+                            color:#000926;
+                        }
+                        &::before{
+                            background-color: #000926;
+                        }
+                    }
+                }
+                .learnmore{
+                    .btn{
+                        border-color: #000926;
+                        color: #000926;
+                    }
+                }
+
+            }
+        }
+
+}

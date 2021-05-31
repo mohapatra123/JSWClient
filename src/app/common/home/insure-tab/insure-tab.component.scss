@@ -376,6 +376,37 @@
                  top: -70px;
              }
          }
+         .insureAIContent{
+             .container{
+                .aiPlatfrom{
+                    margin: 20px auto;
+                    li{
+                        margin: 0 5px;
+                    }
+                }
+                .aiPlatfromCont{
+                    padding: 0 15px;
+                    height: auto;
+                    .tabLayout{
+                        .tab-content{
+                            margin-top: 50px !important;
+                        }
+                        .nav-tabs{
+                            .insurTitle{
+                                h5{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+
+                            }
+                        }
+                    }
+
+
+                }
+             }
+
+         }
          .tabLayout{
              flex-direction: column;
              ul{
@@ -442,5 +473,20 @@
          }
 
      }
-
+     .rList{
+        flex-direction: column;
+        figcaption{
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: 50px;
+            h5{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        figure{
+            max-width: 100%;
+            padding: 0;
+        }
+    }
  }

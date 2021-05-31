@@ -10,7 +10,7 @@
     }
     .resSec{
         position: relative;
-        padding: 50px 0;
+        padding: 40px 0;
         &::before{
             content: '';
             height: 100%;
@@ -112,4 +112,34 @@
         }
     }
 
+}
+.mob{
+    display: none;
+}
+.resourceslist{
+    .carouselHeight{
+        height: 360px !important;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mob{
+        display: block;
+    }
+    .web{
+        display: none;
+    }
+    .resourceslist{
+        .carouselHeight{
+            height: 380px !important;
+
+        }
+    }
+    .resources{
+        .SecTitle{
+            margin: 0px 0 30px;
+
+        }
+    }
 }

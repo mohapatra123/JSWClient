@@ -119,3 +119,20 @@
         width: 100%;
     }
 }
+@media screen and (max-width: 600px) {
+    .pageLayout{
+        .contactUsContSec{
+            padding: 50px 0 80px;
+            .container{
+                .row{
+                    flex-direction: column;
+                    div[class*='col-']{
+                        flex: 100%;
+                        max-width:100%;
+                    }
+                }
+            }
+        }
+    }
+
+}

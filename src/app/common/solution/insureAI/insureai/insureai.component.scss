@@ -294,6 +294,19 @@
 
     }
     @media screen and (max-width: 600px) {
+        .pageBanner {
+            background-size: 100%;
+            .pageTitl{
+            padding: 0;
+            span{
+                font-size: 16px;
+                padding: 0;
+            }
+            }
+        }
+        .SecTitle{
+            margin-bottom: 20px;
+        }
         .aboutusContSec{
             padding: 0 0 50px;
             .container{
@@ -301,6 +314,13 @@
                     .list{
                         flex: 0 0 100%;
                         max-width: 100%;
+                    }
+                }
+                .everyone{
+                    padding-top: 50px;
+                    margin: 30px 0;
+                    +.everyone{
+                        padding: 0;
                     }
                 }
             }
@@ -351,15 +371,22 @@
         }
         .footerDemo{
             .container{
+                padding: 30px 0 80px;
                 .footerDemoinn{
                     padding: 0 30px;
                     h3{
                         font-size: 18px;
                         text-align: center;
                     }
+                    p{
+                        padding: 0;
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
                     .rquBtn{
                         .btn{
                             width: auto;
+                            font-size: 1rem;
                         }
                     }
                 }
