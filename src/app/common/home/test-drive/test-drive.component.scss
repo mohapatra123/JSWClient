@@ -74,7 +74,27 @@
     }
     @media screen and (max-width: 600px) {
         .footerDemo{
+            .maskGrid{
+                transform: skewY(-6deg);
+                .left {
+                    border-radius: 0 30px 30px 0;
+                    height: 24px;
+                    left: 0px;
+                    bottom:-12px;
+                    width: 20%;
+                    &::before{
+                    border-radius:0  30px 30px 0;
+                    height: 20px;
+                    top: -8px;
+                    width: 60%;
+                        }
+                        .line{
+                            display: none;
+                        }
+                     }
+            }
             .container{
+                padding: 50px 0;
                 .footerDemoinn{
                     h3{
                         font-size: 18px;
@@ -85,6 +105,12 @@
                         padding: 20px 40px;
                         font-size: 16px;
                         line-height: 20px;
+                    }
+                    .rquBtn{
+                        .btn{
+                            font-size: 14px;
+                            width: auto;
+                        }
                     }
                 }
             }

@@ -13,7 +13,7 @@
          position: relative;
      }
      .container{
-         padding: 10px 0;
+         padding: 40px 0;
          color: #fff;
          .SecTitle{
          margin: 0 0 10px;
@@ -21,9 +21,7 @@
              span{
                  color: #FF5D2E;
              }
-             +span{
-                //secDatafont-size: 18px;
-             }
+
          }
 
          .scroolSec{
@@ -34,7 +32,7 @@
             &.aiPlatfrom{
                 border: none;
                 display: flex;
-                margin: 50px auto;
+                margin: 30px auto 50px;
                 justify-content: center;
                 position: relative;
                 &::before{
@@ -371,6 +369,7 @@
 
  @media screen and (max-width: 600px) {
      .insureAI{
+        padding: 50px 0;
          .shape{
              .left{
                  top: -70px;
@@ -380,12 +379,14 @@
              .container{
                 .aiPlatfrom{
                     margin: 20px auto;
+                   // flex-direction: column;
+                   justify-content: space-between;
                     li{
                         margin: 0 5px;
                     }
                 }
                 .aiPlatfromCont{
-                    padding: 0 15px;
+                    padding: 0;
                     height: auto;
                     .tabLayout{
                         .tab-content{
@@ -394,8 +395,8 @@
                         .nav-tabs{
                             .insurTitle{
                                 h5{
-                                    font-size: 16px;
-                                    line-height: 24px;
+                                    font-size: 14px;
+                                    line-height: 22px;
                                 }
 
                             }
@@ -418,6 +419,10 @@
                      margin: 0;
                      a{
                          width: 100%;
+                         font-size: 14px;
+                         &.active{
+                            font-size: 14px;
+                         }
                      }
                  }
              }
@@ -446,12 +451,13 @@
              }
          }
          .container{
-             padding: 0;
+             padding: 15px;
              .insuranceSlider{
                  figure{
                      .secData{
                          padding: 10px;
                          margin: 18px 20px 0;
+                         top:0;
                          h5{
                              font-size: 16px;
                          }
@@ -467,10 +473,46 @@
                 li{
                     .nav-link{
                         font-size: 14px;
+                        padding: 10px 0px;
                     }
                 }
              }
          }
+         .maskGrid{
+            transform: skewY(-6deg);
+            .left {
+                border-radius: 0 30px 30px 0;
+                height: 24px;
+                left: 0px;
+                top:-12px;
+                width: 20%;
+                &::before{
+                border-radius:0  30px 30px 0;
+                height: 20px;
+                top: -8px;
+                width: 60%;
+                    }
+                    .line{
+                        display: none;
+                    }
+                 }
+                 .right {
+                    border-radius: 30px 0 0 30px;
+                    height: 24px;
+                    right: 0px;
+                    bottom:-12px;
+                    width: 20%;
+                    &::before{
+                    border-radius:30px 0 0 30px;
+                    height: 20px;
+                    bottom: -8px;
+                    width: 60%;
+                        }
+                        .line{
+                            display: none;
+                        }
+                     }
+                }
 
      }
      .rList{
@@ -480,13 +522,25 @@
             padding: 0;
             margin-bottom: 50px;
             h5{
-                font-size: 16px;
-                line-height: 24px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                margin: 5px 0;
+            }
+            .learnmore{
+                .btn{
+                    font-size: 14px;
+                }
             }
         }
         figure{
             max-width: 100%;
             padding: 0;
         }
+
     }
+
  }

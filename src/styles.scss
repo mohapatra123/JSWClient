@@ -94,27 +94,27 @@ img{
         height: 80px;
         width: 80px;
         &.agnostic{
-            background-position: -252px -7px;
+            background-position:-6px -163px;
             //background-position: -194px -156px;
         }
         &.robust{
-            background-position: -316px -7px;
+            background-position: -65px -163px;
            // background-position: -10px -155px;
         }
         &.ethical{
-            background-position: -378px -7px;
+            background-position:-130px -160px;
            // background-position: -488px -156px;
         }
         &.respons{
-            background-position:-442px -7px;
+            background-position:-316px -163px;
             //background-position:-390px -163px;
         }
         &.training{
-            background-position:-504px -7px;
+            background-position:-187px -163px;
            // background-position: -103px -156px;
         }
         &.domain{
-            background-position:-570px -7px;
+            background-position:-254px -163px;
            // background-position:-291px -156px;
         }
 
@@ -296,15 +296,17 @@ img{
     }
 }
 @media screen and (max-width: 600px) {
+
     .SecTitle{
-        font-size: 24px;
+        font-size: 18px;
+        margin-bottom: 15px;
     }
     .pageBanner {
         height: 250px;
         background-position: top !important;
         background-size: 100%;
         .pageTitl {
-            font-size: 24px;
+            font-size: 20px;
         }
     }
     .shape{

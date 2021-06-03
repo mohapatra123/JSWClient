@@ -203,7 +203,13 @@
 
 @media screen and (max-width: 600px) {
     .topSec{
-
+        .topmedia{
+            .container{
+                ul{
+                    li{margin-left: 10%;}
+                }
+            }
+        }
         .menuSec{
             .logo{
                 max-width: 150px;
@@ -211,6 +217,7 @@
             .navbar-collapse{
                 ul{
                     li{
+
                         a{
                             margin: 0;
                             display: flex;

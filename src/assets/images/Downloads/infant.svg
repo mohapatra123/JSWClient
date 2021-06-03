@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-Icons">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Icons" clip-path="url(#clip-Icons)">
+    <g id="noun_Infant_4287" transform="translate(3)">
+      <path id="Path_8536" data-name="Path 8536" d="M39.054,63.34s1.912,1.914,1.918,1.917a1.688,1.688,0,0,1-.126,2.281l-2.667,2.779a.993.993,0,1,1-1.406-1.393l1.691-1.693-1.656-1.645,2.246-2.246Z" transform="translate(-29.14 -50.672)"/>
+      <path id="Path_8537" data-name="Path 8537" d="M10.636,63.34h0s-1.908,1.914-1.908,1.917a1.689,1.689,0,0,0,.115,2.281l2.677,2.779a.993.993,0,1,0,1.408-1.393l-1.689-1.693,1.645-1.645L10.636,63.34" transform="translate(-6.668 -50.672)"/>
+      <path id="Path_8538" data-name="Path 8538" d="M23.932,5.546A2.773,2.773,0,1,0,21.155,2.77,2.773,2.773,0,0,0,23.932,5.546Z" transform="translate(-16.924)"/>
+      <path id="Path_8539" data-name="Path 8539" d="M10.014,36.342l.04-1.892,2.3,2.151A.983.983,0,0,0,13.7,35.165s-2.643-2.873-3.022-3.207a4.884,4.884,0,0,0-3.409-.977H6.743a4.884,4.884,0,0,0-3.409.977c-.379.335-3.022,3.207-3.022,3.207A.983.983,0,0,0,1.653,36.6l2.3-2.151L4,36.342Z" transform="translate(0 -24.785)"/>
+    </g>
+  </g>
+</svg>

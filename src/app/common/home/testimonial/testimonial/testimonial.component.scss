@@ -3,7 +3,7 @@
     padding-bottom: 100px;
     background-color: #fff;
 .testimonialsLayout{
-    padding: 50px 0 0px;
+    padding: 80px 0 50px;
     background-color: #f2f6fc;
 }
     h2{
@@ -82,15 +82,25 @@
 }
 @media screen and (max-width: 600px) {
     .testimonials{
-        .contentpart{
-            .t-card{
-                padding: 30px 15px 50px ;
-                p.happyuserCont{
-                    font-size: 14px;
-                    line-height: 22px;
+        .testimonialsLayout{
+            padding: 40px 0 30px;
+            .contentpart{
+                &::before{
+                    display: none;
+                }
+                .t-card{
+                    padding: 30px 15px 50px ;
+                    p.happyuserCont{
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
                 }
             }
+            h2{
+                margin: 0;
+            }
         }
+
     }
 
 }
