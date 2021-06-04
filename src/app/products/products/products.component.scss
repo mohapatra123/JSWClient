@@ -118,6 +118,21 @@
     }
 }
 @media screen and (max-width: 600px) {
+
+    .pageBanner {
+        background-size: 150%;
+        background-image: url(../../../assets/images/banner-privacy-policy-min.jpg);
+        .container{
+            background-color:rgba(0,0,0,.4) ;
+        }
+        .pageTitl{
+            padding: 0 0 100px;
+        span{
+            font-size: 16px;
+            padding: 0;
+        }
+        }
+    }
     .pageLayout{
         .TrainingsSec{
             padding: 50px 0 80px;
