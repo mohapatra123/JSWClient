@@ -295,6 +295,48 @@ img{
         align-items: center;
     }
 }
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-control{
+    cursor: pointer;
+    &::placeholder {
+        color: transparent;
+    }
+    &:focus{
+        box-shadow:none;
+    }
+    &:disabled{
+        cursor: not-allowed;
+    }
+    &+.form-label {
+        transition: transform 0.25s, opacity 0.25s ease-in-out;
+        transform-origin: 0 0;
+        position: absolute;
+        top: -0.70rem;
+        left: 1.4rem;
+        user-select: none;
+        z-index: 0;
+        margin-bottom: 0;
+        transform: translate(1%, 70%);
+        pointer-events: none;
+        color: $gray-400;
+    }
+    &:focus,
+    &:not(:placeholder-shown) {
+        &+.form-label {
+            transform: translate(1%, -10%);
+            background: rgb(255,255,255);
+            //background: linear-gradient(180deg, rgb(255, 255, 255) 37%, rgba(253,253,253,1) 37%, rgba(252,252,252,1) 100%);
+            padding: 0 2px;
+            color: $secondary;
+            //font-size: $font-size-sm;
+            top: -0.55rem;
+            background: #fff;
+        }
+    }
+
+}
 @media screen and (max-width: 600px) {
 
     .SecTitle{
