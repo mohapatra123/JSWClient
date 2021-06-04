@@ -18,13 +18,21 @@
             line-height: 26px;
             margin-bottom: 60px;
         }
-        .btn{
-            border-color: #000926;
-            color: #000926;
-            margin-top: 30px;
-            position: relative;
-            z-index: 9;
+        .learnmore{
+            display: flex;
+            justify-content: center;
+            .btn{
+                border-color:#FF5D2E;
+                color: #FF5D2E;
+                margin-bottom: 80px;
+                position: relative;
+                z-index: 9;
+                &:hover{
+                   color: #fff;
+                }
+            }
         }
+
     }
     ul{
         padding: 0;
@@ -40,7 +48,7 @@
             flex-direction: column;
             justify-content: flex-start;
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 50px;
             .iconsprt{
                 align-self: center;
                 &.chatbot{
@@ -67,6 +75,9 @@
                font-size: 18px;
                 color: #000926;
                 padding: 6px 0;
+                &:hover{
+                    text-decoration: none;
+                }
 
             }
             p{
