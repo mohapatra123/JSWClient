@@ -37,13 +37,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul>
+          <ul class="webview">
             <li> <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
 
             <li class="menuMore"> <a href="#" onclick="return false;" class="nav-link"  routerLinkActive="active">Solutions <em></em></a>
               <ul class="submenu">
                 <li class="nav-item">
-                  <a class="nav-link" routerLinkActive="active" href="/solutions/insureAi">InsureAI</a>
+                  <a class="nav-link" routerLinkActive="active" routerLink="/solutions/insureAi">InsureAI</a>
                 </li>
                 <li>
                   <a href="#">DevOps Insights Workbench</a>
@@ -54,11 +54,38 @@
 
               </ul>
             </li>
-            <li class="nav-item"> <a class="nav-link" href="/products">Products</a></li>
-            <li class="nav-item"> <a class="nav-link" href="/services">Services</a></li>
-            <li class="nav-item"> <a class="nav-link" href="/training"> Training</a></li>
+            <li class="nav-item"> <a class="nav-link" routerLink="/products" routerLinkActive="active" >Products</a></li>
+            <li class="nav-item"> <a class="nav-link" routerLink="/services" routerLinkActive="active" >Services</a></li>
+            <li class="nav-item"> <a class="nav-link" routerLink="/training" routerLinkActive="active" > Training</a></li>
             <li class="nav-item"> <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a></li>
             <li class="request nav-item" routerLink="/contactUs"> <button type="button" class="btn btn-outline-primary">
+              Request a Demo
+            </button></li>
+
+          </ul>
+
+          <ul class="modeView">
+            <li> <a class="nav-link" data-toggle="collapse" data-target="#navbarCollapse"  routerLink="/home" routerLinkActive="active">Home</a></li>
+
+            <li class="menuMore"> <a href="#"  onclick="return false;" class="nav-link"  routerLinkActive="active">Solutions <em></em></a>
+              <ul class="submenu">
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" data-target="#navbarCollapse"  routerLinkActive="active" href="/solutions/insureAi">InsureAI</a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="collapse" data-target="#navbarCollapse" >DevOps Insights Workbench</a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="collapse" data-target="#navbarCollapse" >Logwiz<sup>Beta</sup></a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav-item"> <a data-toggle="collapse" data-target="#navbarCollapse"  class="nav-link"  routerLink="/products" routerLinkActive="active">Products</a></li>
+            <li class="nav-item"> <a data-toggle="collapse" data-target="#navbarCollapse"  class="nav-link" routerLink="/services" routerLinkActive="active">Services</a></li>
+            <li class="nav-item"> <a data-toggle="collapse" data-target="#navbarCollapse"  class="nav-link" routerLink="/training" routerLinkActive="active"> Training</a></li>
+            <li class="nav-item"> <a data-toggle="collapse" data-target="#navbarCollapse"  class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" routerLink="/aboutus" routerLinkActive="active">About Us</a></li>
+            <li class="request nav-item" routerLink="/contactUs" data-toggle="collapse" data-target="#navbarCollapse"> <button type="button" class="btn btn-outline-primary">
               Request a Demo
             </button></li>
 

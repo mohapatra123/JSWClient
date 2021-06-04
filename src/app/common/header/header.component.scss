@@ -57,6 +57,9 @@
             display: flex;
             padding: 0;
             margin: 0;
+            &.modeView{
+                display: none;
+            }
             li{
                 display: flex;
                 align-items: center;
@@ -202,11 +205,25 @@
 }
 
 @media screen and (max-width: 600px) {
+
+
     .topSec{
+        nav{
+            ul{
+                &.webview{
+                    display: none;
+                }
+                &.modeView{
+                    display: block;
+                }
+            }
+
+        }
         .topmedia{
             .container{
                 ul{
                     li{margin-left: 10%;}
+
                 }
             }
         }
@@ -264,11 +281,7 @@
         }
 
     }
-    .topmedia{
-        +.container{
 
-        }
-    }
     .navbar-collapse{
                 >ul{
                     display: flex;
