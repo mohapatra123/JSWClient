@@ -107,49 +107,47 @@
         }
 
         .left {
-            background-color: rgba(255, 172, 64, 0.871);
+            background-color: rgba(255, 70, 0,.8);
             border-radius: 0 33px 33px 0;
             height: 47px;
             left: 0px;
             position: absolute;
             top:-22px;
-            width: 15%;
+            width: 20%;
             &::before{
                 content: '';
-            background-color: rgba(255,102,0,0.6);
+            background-color: rgba(255, 145, 0, .8);
             border-radius:0  33px 33px 0;
             height: 40px;
             left: 0;
             position: absolute;
             width: 72%;
-            top: -20px;
+            top: -18px;
                 }
-                .line{
 
-                }
              }
              .right {
-                background-color:rgba(0, 83, 195, .8);
+                background-color:rgba(0, 109, 255,.8);
                 border-radius: 33px 0 0 33px;
                 height: 47px;
                 right: 0px;
                 position: absolute;
                 top:-21px;
-                width: 15%;
+                width: 20%;
                 &::before{
                 content: '';
-                background-color:rgba(82, 197, 233, .6);
+                background-color:rgba(0, 221, 255, 0.8);
                 border-radius:33px 0 0 33px;
                 height: 40px;
                 right: 0;
                 position: absolute;
                 width: 72%;
-                top: -20px;
+                top: -18px;
                     }
                     .line{
                         &::before{
                             background-color:#53B8FC;
-                            right: 106%;
+                            right: 110%;
                             left: unset;
                             top: 1px;
                         }

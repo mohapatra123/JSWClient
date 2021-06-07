@@ -268,7 +268,12 @@
                     }
                 }
             }
-
+            .mentors{
+                height: 350px !important;
+                .teamMember{
+                    width: 230px;
+                }
+                }
         }
     }
 }
@@ -412,6 +417,10 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     margin: 30px 0 0;
+                    &.mentors {
+                        width: 100%;
+                        background-color: red;
+                    }
                     .teamMember{
                         width: 45%;
                         margin: 0 2% 20px;
@@ -428,6 +437,8 @@
                             }
                         }
                     }
+
+
                 }
                 .SecTitle{
                     margin: 20px 0 0;
@@ -435,6 +446,7 @@
             }
 
         }
+
         .footerDemo{
             .container{
                 padding: 100px 0 60px;
@@ -475,3 +487,4 @@
             }
         }
     }
+

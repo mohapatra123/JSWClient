@@ -192,8 +192,9 @@
 
         </div>
         <h2 class="SecTitle">Meet Our Mentors</h2>
-
-        <div class="teams">
+        <div class="teams" style="width: 100%;">
+          <carousel [cellsToShow]="4" class="mentors" [autoplay]="true" [loop]="true">
+            <div class="carousel-cell">
           <div class="teamMember">
             <a class="link trdList" target="_blank"  href="https://www.linkedin.com/in/vijaya-nene-7b558276/">
             <figure>
@@ -205,6 +206,8 @@
               <p>Founder at Vijaya Nene Academy</p>
             </figcaption></a>
           </div>
+          </div>
+          <div class="carousel-cell">
           <div class="teamMember">
             <a class="link trdList" target="_blank"  href="https://www.linkedin.com/in/dr-shruti-mantri-ab473111/">
             <figure>
@@ -216,6 +219,8 @@
               <p>Associate Director at Indian School of Business</p>
             </figcaption></a>
           </div>
+          </div>
+          <div class="carousel-cell">
           <div class="teamMember">
             <a class="link trdList" target="_blank"  href="https://www.linkedin.com/in/ritesh-tiwari-47242647/">
             <figure>
@@ -227,6 +232,8 @@
               <p>Manager - Digital Products at Ominio Group of London</p>
             </figcaption></a>
           </div>
+          </div>
+          <div class="carousel-cell">
           <div class="teamMember">
             <a class="link trdList" target="_blank"  href="https://www.linkedin.com/in/moru-dhaygude-09709211/">
             <figure>
@@ -235,11 +242,25 @@
             <figcaption>
               <span class="iconsprt social linkd"></span>
               <h5>Moreshwar Dhaygude</h5>
-              <p>Lecturer</p>
+              <p>Consultant & Visiting faculty at Mumbai University</p>
             </figcaption></a>
           </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="teamMember">
+              <a class="link trdList" target="_blank"  href="https://www.linkedin.com/in/prof-apurva-yadav-5514b61b/">
+              <figure>
+                <img src="../../assets/images/aboutUs/apurvaYadav.png" alt="Apurva Yadav"/>
+              </figure>
+              <figcaption>
+                <span class="iconsprt social linkd"></span>
+                <h5>Apurva Yadav</h5>
+                <p>HOD of CS and IT at Kirti M. Doongursee College</p>
+              </figcaption></a>
+            </div>
+            </div>
+          </carousel>
         </div>
-
       </div>
     </section>
     <section class="footerDemo">
