@@ -338,8 +338,20 @@ img{
 
 }
 
+.mob{
+    display: none;
+}
 @media screen and (max-width: 600px) {
-
+    .web{
+display: none;
+    }
+    .mob{
+        display: block;
+        .carousel-cells .carousel-cell {
+            display: flex;
+            justify-content: center;
+        }
+    }
     .SecTitle{
         font-size: 18px;
         margin-bottom: 15px;
