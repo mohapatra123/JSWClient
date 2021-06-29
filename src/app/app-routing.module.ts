@@ -12,6 +12,8 @@ import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypoli
 import { TermsandconditionsComponent} from './policies/termsandconditions/termsandconditions.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import {ThankYouComponent} from './thankYou/thank-you/thank-you.component';
+import { CareerComponent } from './career/career/career.component';
+import { CreateCareerComponent } from './career/create-career/create-career.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'termsandconditions', component: TermsandconditionsComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'thankyou', component:ThankYouComponent},
+  { path: 'career', component:CareerComponent},
+  { path: 'career/create-career', component:CreateCareerComponent}  
 ];
 
 @NgModule({

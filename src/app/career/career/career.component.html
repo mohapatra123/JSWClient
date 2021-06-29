@@ -1,0 +1,29 @@
+<section class="pageBanner">
+    <div class="container">
+        <h2 class="pageTitl">Career</h2>
+    </div>
+</section>
+<section class="pageLayout">
+    <div class="backGroundMask">
+        <div class="maskGrid">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <section class="TrainingsSec">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let item of testData" class="col-6">
+                    <div class="t-list" (click)="postCareer(item)">
+                        <input type="hidden" name="careerId">
+                        <h5>{{item.careerTitle}}</h5>
+                        <h5>{{item.careerType}}</h5>
+                        <h5>{{item.location}}</h5>
+                        <h5>{{item.description}}</h5>
+                        <h5>{{item.status}}</h5>
+                    </div>
+                </div>                
+            </div>            
+         </div>
+    </section>
+</section>

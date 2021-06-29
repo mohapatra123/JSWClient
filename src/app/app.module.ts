@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +31,9 @@ import { PrivacypoliciesComponent } from './policies/privacypolicies/privacypoli
 import { TermsandconditionsComponent } from './policies/termsandconditions/termsandconditions.component';
 import { ContactUsComponent } from './contact/contact-us/contact-us.component';
 import { ThankYouComponent } from './thankYou/thank-you/thank-you.component';
+import { CareerService } from './core/services/career.service';
+import { CareerComponent } from './career/career/career.component';
+import { CreateCareerComponent } from './career/create-career/create-career.component';
 
 
 @NgModule({
@@ -58,13 +63,16 @@ import { ThankYouComponent } from './thankYou/thank-you/thank-you.component';
     TermsandconditionsComponent,
     ContactUsComponent,
     ThankYouComponent,
+    CareerComponent,
+    CreateCareerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, IvyCarouselModule
+    NgbModule, IvyCarouselModule,
+    HttpClientModule, FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CareerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

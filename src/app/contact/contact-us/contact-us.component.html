@@ -139,7 +139,19 @@
         </div>
       </div>
     </div>
+    <div fxLayout="row" style="width: 300px; background-color: cadetblue;">
+      <div fxFlex="65">
+          <div style="border: 1px solid black;" *ngFor="let item of testData">
+              <input type="hidden" [value]="item.id">
+              <p>Name: {{ item.name }}</p>
+              <p>Location: {{ item.location }}</p>
+              <p>Remote: {{ item.isRemote }}</p>
+          </div>
+      </div>    
+  </div>
   </section>
+  
+  
 </section>
 
 <script>

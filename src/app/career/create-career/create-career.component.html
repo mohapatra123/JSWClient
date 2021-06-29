@@ -1,0 +1,55 @@
+<section class="pageBanner">
+    <div class="container">
+        <h2 class="pageTitl">{{careerObj.careerTitle}}</h2>
+        <br>
+        <h5 style="color: white;">{{careerObj.careerType}}</h5>
+    
+    </div>
+</section>
+<section class="pageLayout">
+    <div class="backGroundMask">
+        <div class="maskGrid">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <section class="TrainingsSec">
+        <div>
+            {{careerObj.description}}
+        </div>
+        <div class="container">
+            <form [formGroup]="createCareerForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <input type="hidden" formControlName="careerId">               
+                </div> 
+                <div class="row">
+                    <label for="firstName">First Name</label> 
+                    <input type="text" formControlName="firstName">               
+                </div> 
+                <div class="row">
+                    <label for="lastName">Last Name</label> 
+                    <input type="text" formControlName="lastName">               
+                </div> 
+                <div class="row">
+                    <label for="emailId">Email</label> 
+                    <input type="text" formControlName="emailId">               
+                </div> 
+                <div class="row">
+                    <label for="phoneNo">Phone</label> 
+                    <input type="text" formControlName="phoneNo">               
+                </div> 
+                <div class="row">
+                    <label for="location">Location</label> 
+                    <input type="text" formControlName="location">               
+                </div> 
+                <div class="row">
+                    <label for="refInfo">Ref Info</label> 
+                    <input type="text" formControlName="refInfo">               
+                </div> 
+                <div class="row">
+                    <button type="submit">Submit</button>             
+                </div>               
+            </form>      
+         </div>
+    </section>
+</section>
