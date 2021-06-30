@@ -12,18 +12,32 @@
     </div>
     <section class="TrainingsSec">
         <div class="container">
-            <div class="row">
-                <div *ngFor="let item of testData" class="col-6">
+            <div class="contentSec">
+                <h2 class="SecTitle text-center">
+                Join the community</h2>
+            <p class="text-center">Data Science Wizards is a community of people who believe in the power of data to change the
+                world, <br/>and ready to challenge the complexity and inadequacy of conventional approaches in
+                pursuit  <br/>of better answers to the world's toughest challenges.</p>
+
+
+            </div>
+            <div class="careerlist">
+            <h2 class="SecTitle text-center">
+                Current openings</h2>
+            <div class="row ">
+
+                <div *ngFor="let item of careerData" class="col-6">
                     <div class="t-list" (click)="postCareer(item)">
                         <input type="hidden" name="careerId">
                         <h5>{{item.careerTitle}}</h5>
-                        <h5>{{item.careerType}}</h5>
-                        <h5>{{item.location}}</h5>
-                        <h5>{{item.description}}</h5>
-                        <h5>{{item.status}}</h5>
+                        <strong>{{item.careerType}}</strong>
+                        <span class="location"><span></span>{{item.location}}</span>
+                        <!-- <h5>{{item.description}}</h5> -->
+                        <span class="applay">Apply</span>
                     </div>
-                </div>                
-            </div>            
+                </div>
+            </div>
+        </div>
          </div>
     </section>
 </section>

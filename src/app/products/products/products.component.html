@@ -1,6 +1,8 @@
 <section class="pageBanner">
     <div class="container">
-        <h2 class="pageTitl">DSW Products</h2>
+        <h2 class="pageTitl">DSW Products<br/>
+          <span>AI products customized based on your business needs.</span>
+        </h2>
     </div>
 </section>
 <section class="pageLayout">
@@ -12,6 +14,50 @@
     </div>
     <section class="TrainingsSec">
         <div class="container">
+          <ul ngbNav #procucts="ngbNav" class="nav-tabs aiPlatfrom">
+          <li ngbNavItem>
+            <a ngbNavLink>DevOps Insights Workbench</a>
+            <ng-template ngbNavContent>
+                <div class="rList">
+
+                    <figcaption>
+                      <h5>Leveraging DevOps & continuously improve Business outcome</h5>
+                     <!-- <h3>DevOps Workbench </h3> -->
+                        <p>Stay ahead of the curve. Gain a head start on competition with increased agility, reliability and turnaround times for better business outcomes. </p><p>Holistic views which enable DevOps Engineers, Technology Leaders & Executives to make Informed Decisions , observe Product Health from "Code Commit to Deployment" across environments.</p>
+                        <div class="learnmore">
+                          <button class="btn btn-outline-primary btn-lg" routerLink="/contactUs">Explore more</button>
+                         </div>
+                      </figcaption>
+                      <figure class="animate__animated animate__bounceInRight">
+                        <img src="../assets/images/DevOps.png" alt="DevOps Workbench" title="DevOps Workbench" >
+                      </figure>
+
+                </div>
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a ngbNavLink>Logwiz <sup>Beta</sup></a>
+            <ng-template ngbNavContent>
+              <div class="rList one">
+                <figcaption>
+                  <h5>Intelligent Log Management & Monitoring Solution</h5>
+
+                    <p>Integrated Infrastructure that enables enhanced threat management system with the power of AI. Gain faster anomaly or threat detection, analysis and response times. </p><p>Centralized log management to derive insights & bring the power of anomaly detection, predictive intelligence and capacity planning.</p>
+                    <div class="learnmore">
+                     <button class="btn btn-outline-primary btn-lg" routerLink="/contactUs">Explore more</button>
+                    </div>
+                  </figcaption>
+                  <figure class="animate__animated animate__bounceInRight">
+                    <img src="../assets/images/Logwiz.png" alt="Logwiz" title="Logwiz" >
+                  </figure>
+
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+
+        <div [ngbNavOutlet]="procucts" class="mt-2 aiPlatfromCont"></div>
+
             <div class="row">
                 <div class="col-6">
                     <div class="t-list">

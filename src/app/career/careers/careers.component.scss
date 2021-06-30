@@ -65,12 +65,12 @@
         position: relative;
         z-index: 5;
         margin-top: -100px;
-        // .row{
-        //     justify-content: center;
-        //     div[class*='col-']{
-        //         padding: 30px;
-        //     }
-        // }
+        .row{
+            justify-content: center;
+            div[class*='col-']{
+                padding: 30px;
+            }
+        }
 
         .t-list{
             padding: 40px;
@@ -113,33 +113,6 @@
             }
             strong{
                 color: #002C67;
-            }
-        }
-    }
-    .contactForm{
-        width: 50%;
-        margin: 0 auto;
-        .plcyInfo{
-            font-size: 12px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .btn{
-            width: 100%;
-        }
-        .file{
-            .form-control {
-                padding: 10px;
-                height: 54px;
-            }
-        }
-        .custom-file{
-            .custom-file-label{
-                color: #333;
-                border-radius: 0;
-                &::after{
-                    color: #333;
-                }
             }
         }
     }

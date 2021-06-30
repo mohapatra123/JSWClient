@@ -14,7 +14,7 @@ export class CareerService {
   errorMsg: string = '';
 
 
-  constructor(private _http: HttpClient) { 
+  constructor(private _http: HttpClient) {
     this.header = new HttpHeaders();
     this.header.append('Content-Type', 'application/json');
     this.header.append('Access-Control-Allow-Origin' , '*');
@@ -22,7 +22,7 @@ export class CareerService {
   }
 
   getCareer(): Observable<any>{
-    return this._http.get(this.baseUri + 'career', { headers: this.header }).pipe(
+    return this._http.get(this.baseUri + 'careers', { headers: this.header }).pipe(
       map((response) => {
           return response;
       }), catchError(err => {
@@ -54,8 +54,18 @@ export class CareerService {
     }
 }
 
-  postCareer(postData: any){
-    return this._http.post(this.baseUri + 'career', postData, { headers: this.header }).pipe(
+  postCareer(postData: any, formData: FormData): Observable<any>{
+    //let formData: FormData = new FormData();
+    formData.append('firstName', postData.firstName);
+    formData.append('lastName', postData.lastName);
+    formData.append('emailId', postData.emailId);
+    formData.append('phoneNo', postData.phoneNo);
+    formData.append('location', postData.location);
+    formData.append('careerId', postData.careerId);
+    formData.append('refInfo', postData.refInfo);
+    //formData.append('cvFile', postData.get('filePath').value);
+
+    return this._http.post(this.baseUri + 'careers/apply', formData, { headers: this.header }).pipe(
       map((response) => {
           return response;
       }),
@@ -68,6 +78,6 @@ export class CareerService {
         }
         return throwError(this.errorMsg);
       })
-    ); 
+    );
   }
 }

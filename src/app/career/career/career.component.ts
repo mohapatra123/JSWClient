@@ -14,19 +14,20 @@ export class CareerComponent implements OnInit {
 
   testData: any = [];
 
-  constructor(private _careerService: CareerService, private _router: Router, private _authService: AuthService) { 
+  constructor(private _careerService: CareerService, private _router: Router, private _authService: AuthService) {
 
   }
 
-  ngOnInit(): void {    
-    this.testData = [
-      {"careerId":1,"careerTitle":"java developer","careerType":"intern","location":"mumbai","description":"dec_java","status": 1 },
-      {"careerId":2,"careerTitle":"python developer","careerType":"intern","location":"hyderabad","description":"dec_python","status": 2 }
-    ];
+  ngOnInit(): void {
+    this.getCareerData();
+    // this.testData = [
+    //   {"careerId":1,"careerTitle":"java developer","careerType":"intern","location":"mumbai","description":"dec_java","status": 1 },
+    //   {"careerId":2,"careerTitle":"python developer","careerType":"intern","location":"hyderabad","description":"dec_python","status": 2 }
+    // ];
   }
 
   getCareerData(){
-    this._careerService.getCareer().subscribe(res => {      
+    this._careerService.getCareer().subscribe(res => {
       console.log(res);
       this.careerData =  res;
     })

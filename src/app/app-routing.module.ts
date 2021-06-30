@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'thankyou', component:ThankYouComponent},
   { path: 'career', component:CareerComponent},
-  { path: 'career/create-career', component:CreateCareerComponent}  
+  { path: 'career/create-career', component:CreateCareerComponent}
 ];
 
 @NgModule({

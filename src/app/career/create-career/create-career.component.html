@@ -1,9 +1,8 @@
 <section class="pageBanner">
     <div class="container">
         <h2 class="pageTitl">{{careerObj.careerTitle}}</h2>
-        <br>
         <h5 style="color: white;">{{careerObj.careerType}}</h5>
-    
+
     </div>
 </section>
 <section class="pageLayout">
@@ -14,42 +13,83 @@
         </div>
     </div>
     <section class="TrainingsSec">
-        <div>
-            {{careerObj.description}}
-        </div>
+
         <div class="container">
-            <form [formGroup]="createCareerForm" (ngSubmit)="onSubmit()">
-                <div class="row">
-                    <input type="hidden" formControlName="careerId">               
-                </div> 
-                <div class="row">
-                    <label for="firstName">First Name</label> 
-                    <input type="text" formControlName="firstName">               
-                </div> 
-                <div class="row">
-                    <label for="lastName">Last Name</label> 
-                    <input type="text" formControlName="lastName">               
-                </div> 
-                <div class="row">
-                    <label for="emailId">Email</label> 
-                    <input type="text" formControlName="emailId">               
-                </div> 
-                <div class="row">
-                    <label for="phoneNo">Phone</label> 
-                    <input type="text" formControlName="phoneNo">               
-                </div> 
-                <div class="row">
-                    <label for="location">Location</label> 
-                    <input type="text" formControlName="location">               
-                </div> 
-                <div class="row">
-                    <label for="refInfo">Ref Info</label> 
-                    <input type="text" formControlName="refInfo">               
-                </div> 
-                <div class="row">
-                    <button type="submit">Submit</button>             
-                </div>               
-            </form>      
-         </div>
+
+            <h2 class="SecTitle text-center">Description</h2>
+            <div>
+                {{careerObj.description}}
+            </div>
+            <p> {{careerObj.location}}</p>
+
+            <div class="contactForm">
+                <h2 class="SecTitle text-center">Apply for This Role</h2>
+
+
+                <form [formGroup]="createCareerForm" (ngSubmit)="onSubmit()">
+                    <div>
+                        <input type="hidden" formControlName="careerId">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input type="text" formControlName="firstName" class="form-control" placeholder="FIrst Name">
+                                <label class="form-label">First Name</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" formControlName="lastName" class="form-control" placeholder="Last Name">
+                        <label class="form-label" for="lastName">Last Name</label>
+                    </div>
+                    </div>
+                    <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" formControlName="emailId" class="form-control" placeholder="EmailId">
+                        <label class="form-label" for="emailId">Email</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" formControlName="phoneNo" class="form-control" placeholder="Phone">
+                        <label class="form-label" for="phoneNo">Phone</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" formControlName="location" class="form-control" placeholder="Location">
+                        <label class="form-label" for="location">Location</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group ">
+                        <input type="text" formControlName="refInfo" class="form-control" placeholder="refInfo">
+                        <label class="form-label" for="refInfo">RefInfo</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="custom-file">
+                        <input type="file" formControlName="filePath" id="file" class="form-control" (change)="onFileChange($event)">
+                        <label class="custom-file-label" for="filePath">Upload Resume/ CV</label>
+                    </div>
+                    <!-- <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                      </div> -->
+                </div>
+
+            </div>
+
+                    <p class="plcyInfo">By submitting your information to our website you agree to the terms outlined in our <a
+                        href="/privacypolicies"> Privacy Policy.</a></p>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+                </form>
+            </div>
+        </div>
     </section>
 </section>
