@@ -65,7 +65,7 @@ export class CareerService {
     formData.append('refInfo', postData.refInfo);
     //formData.append('cvFile', postData.get('filePath').value);
 
-    return this._http.post(this.baseUri + 'careers/apply', formData, { headers: this.header }).pipe(
+    return this._http.post('http://localhost:8081/dsw/api/o/careers/apply', formData, { headers: this.header }).pipe(
       map((response) => {
           return response;
       }),

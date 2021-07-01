@@ -58,6 +58,7 @@ export class CreateCareerComponent implements OnInit {
     // })
     let formData: FormData = new FormData();
     formData.append('cvFile', this.createCareerForm.get('filePath').value);
+    console.log(formData);
     this._careerService.postCareer(this.createCareerForm.value, formData).subscribe(res => {
       console.log(res)
     })
@@ -65,12 +66,15 @@ export class CreateCareerComponent implements OnInit {
   }
 
   onFileChange(event: any){
+    console.log(1);
     if(event.target.files.length > 0){
-      const file = event.target.files[0];
-      this.createCareerForm.get('filePath').setValue(file);
-      // this.createCareerForm.patchValue({
-      //   cvFile: file
-      // });
+      const file = (event.target.files[0] as File);
+      //this.createCareerForm.get('filePath').setValue(file);
+      console.log(2);
+      this.createCareerForm.patchValue({
+        filePath: file
+      });
     }
   }
+
 }
