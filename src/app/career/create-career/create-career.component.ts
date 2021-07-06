@@ -24,6 +24,7 @@ export class CreateCareerComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
    this.setForm();
   }
 
@@ -49,6 +50,7 @@ export class CreateCareerComponent implements OnInit {
       refInfo: new FormControl('', [Validators.required]),
       cvFile: new FormControl('', [Validators.required]),
       filePath: new FormControl(''),
+      linkedIn: new FormControl('', [Validators.required]),
     });
   }
 

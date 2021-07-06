@@ -20,6 +20,7 @@ export class CareerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCareerData();
+    window.scrollTo(0, 0);
     // this.testData = [
     //   {"careerId":1,"careerTitle":"java developer","careerType":"intern","location":"mumbai","description":"dec_java","status": 1 },
     //   {"careerId":2,"careerTitle":"python developer","careerType":"intern","location":"hyderabad","description":"dec_python","status": 2 }
@@ -28,8 +29,7 @@ export class CareerComponent implements OnInit {
 
   getCareerData(){
     this._careerService.getCareer().subscribe(res => {
-      console.log(res);
-      this.careerData =  res;
+      this.careerData =  res.carrers;
     })
   }
 

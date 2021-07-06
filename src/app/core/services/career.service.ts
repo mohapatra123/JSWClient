@@ -22,7 +22,7 @@ export class CareerService {
   }
 
   getCareer(): Observable<any>{
-    return this._http.get(this.baseUri + 'careers', { headers: this.header }).pipe(
+    return this._http.get('http://localhost:8081/api/o/careers', { headers: this.header }).pipe(
       map((response) => {
           return response;
       }), catchError(err => {
@@ -63,9 +63,10 @@ export class CareerService {
     formData.append('location', postData.location);
     formData.append('careerId', postData.careerId);
     formData.append('refInfo', postData.refInfo);
+    formData.append('linkedIn', postData.linkedIn);
     //formData.append('cvFile', postData.get('filePath').value);
 
-    return this._http.post('http://localhost:8081/dsw/api/o/careers/apply', formData, { headers: this.header }).pipe(
+    return this._http.post('http://localhost:8081/api/o/careers/apply', formData, { headers: this.header }).pipe(
       map((response) => {
           return response;
       }),
