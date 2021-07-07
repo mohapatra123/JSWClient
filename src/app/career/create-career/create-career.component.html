@@ -20,8 +20,7 @@
         <div class="container">
 
             <h2 class="SecTitle text-center">Description</h2>
-            <div>
-                {{careerObj.description}}
+            <div [innerHTML]="careerObj.description">
             </div>
             <p> {{careerObj.location}}</p>
 
@@ -86,7 +85,7 @@
                         <label class="custom-file-label" for="filePath">Upload Resume/ CV</label>
                     </div> -->
                     <div class="custom-file">
-                        <input type="file"  id="file" (change)="onFileChange($event)" required>
+                        <input type="file" #inputFile  id="file" (change)="onFileChange($event)" required>
 
                       </div>
 
@@ -100,6 +99,9 @@
 
                 </form>
             </div>
+        </div>
+        <div *ngIf="isPosted">
+            Thanks. Your detail is successfully posted.
         </div>
     </section>
 </section>

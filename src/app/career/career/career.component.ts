@@ -29,7 +29,7 @@ export class CareerComponent implements OnInit {
 
   getCareerData(){
     this._careerService.getCareer().subscribe(res => {
-      this.careerData =  res.carrers;
+      this.careerData =  res;
     })
   }
 

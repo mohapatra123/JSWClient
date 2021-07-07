@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
+
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CareerService } from 'src/app/core/services/career.service';
 
@@ -10,11 +11,14 @@ import { CareerService } from 'src/app/core/services/career.service';
 })
 export class CreateCareerComponent implements OnInit {
 
+  @ViewChild('inputFile') inputFileType: any;
+
   createCareerForm: any;
   _careerId: number = 0;
   jsonObject: any;
   careerOjbect: any;
   careerObj: any;
+  isPosted: boolean = false;
 
   constructor(private fb: FormBuilder,
     private _reactiveFormsModule: ReactiveFormsModule,
@@ -58,11 +62,17 @@ export class CreateCareerComponent implements OnInit {
     // this._careerService.getCareer().subscribe(res => {
     //   console.log(res)
     // })
+    this.isPosted = false;
     let formData: FormData = new FormData();
     formData.append('cvFile', this.createCareerForm.get('filePath').value);
     console.log(formData);
     this._careerService.postCareer(this.createCareerForm.value, formData).subscribe(res => {
       console.log(res)
+      if(res.error == false){
+        this.createCareerForm.reset();
+        this.isPosted = true;
+        this.inputFileType.nativeElement.value = null;
+      }
     })
     console.log(this.createCareerForm.value);
   }
