@@ -63,6 +63,9 @@ export class CareerService {
     formData.append('location', postData.location);
     formData.append('careerId', postData.careerId);
     formData.append('refInfo', postData.refInfo);
+    formData.append('country', postData.country);
+    formData.append('state', postData.state);
+    formData.append('city', postData.city);
     formData.append('linkedIn', postData.linkedIn);
     //formData.append('cvFile', postData.get('filePath').value);
 

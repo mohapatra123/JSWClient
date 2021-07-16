@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, FormControl, 
 
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CareerService } from 'src/app/core/services/career.service';
+import { Country, State, City }  from 'country-state-city';
+import { ICountry, IState, ICity, Timezones, CountryData, StateData, CityData } from 'src/app/models/career/location.model';
 
 @Component({
   selector: 'app-create-career',
@@ -20,6 +22,15 @@ export class CreateCareerComponent implements OnInit {
   careerObj: any;
   isPosted: boolean = false;
 
+  country: CountryData = { code: ''};
+  state: StateData = { code: ''};
+  city: CityData = { name: ''};
+
+  countryArr: ICountry[] = [];
+  stateArr: IState[] = [];
+  cityArr: ICity[] = [];
+
+
   constructor(private fb: FormBuilder,
     private _reactiveFormsModule: ReactiveFormsModule,
     private _authService: AuthService,
@@ -28,6 +39,7 @@ export class CreateCareerComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    this.countryArr = Country.getAllCountries();
     window.scrollTo(0, 0);
    this.setForm();
   }
@@ -52,6 +64,9 @@ export class CreateCareerComponent implements OnInit {
       careerId: new FormControl(this.careerOjbect.careerId),
       phoneNo: new FormControl('', ),
       refInfo: new FormControl('', [Validators.required]),
+      country: new FormControl('', [Validators.required]),
+      state: new FormControl('', [Validators.required]),
+      city: new FormControl('', [Validators.required]),
       cvFile: new FormControl('', [Validators.required]),
       filePath: new FormControl(''),
       linkedIn: new FormControl('', [Validators.required]),
@@ -89,4 +104,16 @@ export class CreateCareerComponent implements OnInit {
     }
   }
 
+  selectedChanged(event: any, obj: string){
+    if(obj == 'country'){
+      this.stateArr = State.getStatesOfCountry(event);
+      if(this.country.code != event){
+        this.cityArr = [];  
+        this.country.code = event;
+      }      
+    }
+    else if(obj == 'state')    {      
+      this.cityArr = City.getCitiesOfState(this.country.code, event);      
+    }
+  }
 }
