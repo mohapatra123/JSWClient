@@ -337,7 +337,27 @@ img{
     }
 
 }
+.selectplugin{
+    select{
+        padding: 6px;
+        border-color: #CACED5;
+    }
 
+    label{
+        position: absolute;
+        z-index: 0;
+        top: -13px;
+        left: 25px;
+        color: $secondary;
+        padding: 0 2px;
+        //font-size: 0.76563rem;
+        margin: 0;
+        background: $black;
+        background: linear-gradient(0deg, rgba($black,0) 0%, rgba($white,1) 50%, rgba($white,1) 100%); }
+        &.predictiveSch {
+            z-index: 1;
+        }
+    }
 .mob{
     display: none;
 }

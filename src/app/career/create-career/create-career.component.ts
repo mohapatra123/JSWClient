@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
-
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CareerService } from 'src/app/core/services/career.service';
 import { Country, State, City }  from 'country-state-city';
@@ -34,7 +34,8 @@ export class CreateCareerComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private _reactiveFormsModule: ReactiveFormsModule,
     private _authService: AuthService,
-    private _careerService: CareerService) {
+    private _careerService: CareerService,
+    private _router: Router) {
 
      }
 
@@ -87,6 +88,7 @@ export class CreateCareerComponent implements OnInit {
         this.createCareerForm.reset();
         this.isPosted = true;
         this.inputFileType.nativeElement.value = null;
+        this._router.navigateByUrl('thankyou');
       }
     })
     console.log(this.createCareerForm.value);

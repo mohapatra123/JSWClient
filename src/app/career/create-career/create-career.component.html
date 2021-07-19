@@ -24,7 +24,7 @@
             </div>
             <p> {{careerObj.location}}</p>
 
-            <div class="contactForm">
+            <div class="contactForm mt-5">
                 <h2 class="SecTitle text-center">Apply for This Role</h2>
 
 
@@ -61,11 +61,44 @@
                         <label class="form-label" for="phoneNo">Phone</label>
                     </div>
                 </div>
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <div class="form-group">
                         <input type="text" formControlName="location" class="form-control" placeholder="Location">
                         <label class="form-label" for="location">Location</label>
                     </div>
+                </div> -->
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group selectplugin">
+                                <select formControlName="country" (ngModelChange)="selectedChanged($event, 'country')" class="form-field">
+                                    <option [value]="">--Select--</option>
+                                    <option *ngFor="let item of countryArr" [value]="item.isoCode">{{item.name}}</option>
+                                </select>
+                                <label class="form-label" >Select Country</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group selectplugin">
+                                <select formControlName="state" placeholder="Select" (ngModelChange)="selectedChanged($event, 'state')" class="form-field">
+                                    <option [value]="">--Select--</option>
+                                    <option *ngFor="let item of stateArr" [value]="item.isoCode">{{item.name}}</option>
+                                  </select>
+                                  <label class="form-label" >Select State</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group selectplugin">
+                                <select formControlName="city" (ngModelChange)="selectedChanged($event, 'city')" class="form-field">
+                                    <option [value]="">--Select--</option>
+                                    <option *ngFor="let item of cityArr" [value]="item.name">{{item.name}}</option>
+                                </select>
+                                <label class="form-label" >Select City</label>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="col-12">
                     <div class="form-group">
@@ -79,32 +112,10 @@
                         <label class="form-label" for="refInfo">RefInfo</label>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="form-group ">
-                        <mat-select formControlName="country" (ngModelChange)="selectedChanged($event, 'country')" class="form-field">
-                            <mat-option [value]="">--Select--</mat-option>
-                            <mat-option *ngFor="let item of countryArr" [value]="item.isoCode">{{item.name}}</mat-option>
-                        </mat-select>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="form-group ">
-                        <mat-select formControlName="state" (ngModelChange)="selectedChanged($event, 'state')" class="form-field">
-                            <mat-option [value]="">--Select--</mat-option>
-                            <mat-option *ngFor="let item of stateArr" [value]="item.isoCode">{{item.name}}</mat-option>
-                          </mat-select>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="form-group ">
-                        <mat-select formControlName="city" (ngModelChange)="selectedChanged($event, 'city')" class="form-field">
-                            <mat-option [value]="">--Select--</mat-option>
-                            <mat-option *ngFor="let item of cityArr" [value]="item.name">{{item.name}}</mat-option>
-                        </mat-select>
-                    </div>
-                </div>
-                
-                
+
+
+
+
                 <div class="col-12">
                     <!-- <div class="form-group">
                         <input type="file" formControlName="filePath" id="file" class="form-control" (change)="onFileChange($event)">
