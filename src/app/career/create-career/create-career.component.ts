@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { CareerService } from 'src/app/core/services/career.service';
 import { Country, State, City }  from 'country-state-city';
 import { ICountry, IState, ICity, Timezones, CountryData, StateData, CityData } from 'src/app/models/career/location.model';
+import { careerTypes } from 'src/app/models/constant/constant.model';
 
 @Component({
   selector: 'app-create-career',
@@ -21,6 +22,7 @@ export class CreateCareerComponent implements OnInit {
   careerOjbect: any;
   careerObj: any;
   isPosted: boolean = false;
+  _careerTypeList: any;
 
   country: CountryData = { code: ''};
   state: StateData = { code: ''};
@@ -41,6 +43,7 @@ export class CreateCareerComponent implements OnInit {
 
   ngOnInit(): void {
     this.countryArr = Country.getAllCountries();
+    this._careerTypeList = careerTypes;
     window.scrollTo(0, 0);
    this.setForm();
   }
@@ -49,12 +52,15 @@ export class CreateCareerComponent implements OnInit {
     if(this._authService.getLocalValue('careerPostData') != null && this._authService.getLocalValue('careerPostData') != undefined){
       this.jsonObject = this._authService.getLocalValue('careerPostData');
       this.careerOjbect = JSON.parse(this.jsonObject);
+      console.log(this.careerOjbect);
       this.careerObj = {
         careerTitle: this.careerOjbect.careerTitle,
         careerType: this.careerOjbect.careerType,
-        location: this.careerOjbect.location,
+        city: this.careerOjbect.city,
         description: this.careerOjbect.description,
-        careerId: this.careerOjbect.careerId
+        careerId: this.careerOjbect.careerId,
+        country: this.careerOjbect.country,
+        workPlace: this.careerOjbect.workPlace
       }
     }
     this.createCareerForm = this.fb.group({
@@ -110,12 +116,28 @@ export class CreateCareerComponent implements OnInit {
     if(obj == 'country'){
       this.stateArr = State.getStatesOfCountry(event);
       if(this.country.code != event){
-        this.cityArr = [];  
+        this.cityArr = [];
         this.country.code = event;
-      }      
+      }
     }
-    else if(obj == 'state')    {      
-      this.cityArr = City.getCitiesOfState(this.country.code, event);      
+    else if(obj == 'state')    {
+      this.cityArr = City.getCitiesOfState(this.country.code, event);
     }
+  }
+
+  getCountry(countryCode: string){
+    return Country.getCountryByCode(countryCode)?.name;
+  }
+
+  setLocation(city: string, workPlace: number): string{
+    switch(workPlace){
+      case 0:
+        return city;
+      case 1:
+        return 'Remote';
+      case 2:
+        return city + ' (Currently Remote)';
+    }
+    return '';
   }
 }

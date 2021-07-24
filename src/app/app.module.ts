@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { MatModule } from '../app/mat-module/mat-module.module'
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -34,6 +34,9 @@ import { ThankYouComponent } from './thankYou/thank-you/thank-you.component';
 import { CareerService } from './core/services/career.service';
 import { CareerComponent } from './career/career/career.component';
 import { CreateCareerComponent } from './career/create-career/create-career.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextReplacePipe } from 'src/app/core/pipe/text-replace.pipe';
+
 
 
 @NgModule({
@@ -65,12 +68,17 @@ import { CreateCareerComponent } from './career/create-career/create-career.comp
     ThankYouComponent,
     CareerComponent,
     CreateCareerComponent,
+    TextReplacePipe
   ],
   imports: [
+    MatModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule, IvyCarouselModule,
-    HttpClientModule, FormsModule, ReactiveFormsModule
+    HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule
+  ],
+  exports: [
+    TextReplacePipe
   ],
   providers: [CareerService],
   bootstrap: [AppComponent]

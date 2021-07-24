@@ -14,49 +14,85 @@
     </div>
     <section class="TrainingsSec">
         <div class="container">
-          <ul ngbNav #procucts="ngbNav" class="nav-tabs aiPlatfrom">
-          <li ngbNavItem>
-            <a ngbNavLink>DevOps Insights Workbench</a>
-            <ng-template ngbNavContent>
-                <div class="rList">
 
-                    <figcaption>
-                      <h5>Leveraging DevOps & continuously improve Business outcome</h5>
-                     <!-- <h3>DevOps Workbench </h3> -->
-                        <p>Stay ahead of the curve. Gain a head start on competition with increased agility, reliability and turnaround times for better business outcomes. </p><p>Holistic views which enable DevOps Engineers, Technology Leaders & Executives to make Informed Decisions , observe Product Health from "Code Commit to Deployment" across environments.</p>
-                        <div class="learnmore">
-                          <button class="btn btn-outline-primary btn-lg" routerLink="/contactUs">Explore more</button>
-                         </div>
-                      </figcaption>
-                      <figure class="animate__animated animate__bounceInRight">
-                        <img src="../assets/images/DevOps.png" alt="DevOps Workbench" title="DevOps Workbench" >
-                      </figure>
-
-                </div>
-            </ng-template>
-          </li>
-          <li ngbNavItem>
-            <a ngbNavLink>Logwiz <sup>Beta</sup></a>
-            <ng-template ngbNavContent>
-              <div class="rList one">
-                <figcaption>
-                  <h5>Intelligent Log Management & Monitoring Solution</h5>
-
-                    <p>Integrated Infrastructure that enables enhanced threat management system with the power of AI. Gain faster anomaly or threat detection, analysis and response times. </p><p>Centralized log management to derive insights & bring the power of anomaly detection, predictive intelligence and capacity planning.</p>
-                    <div class="learnmore">
-                     <button class="btn btn-outline-primary btn-lg" routerLink="/contactUs">Explore more</button>
-                    </div>
-                  </figcaption>
-                  <figure class="animate__animated animate__bounceInRight">
+          <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Chatbot">
+              <div class="productContentPart">
+                <div class="row">
+                  <div class="col-6">
+                    <h4>Chatbot</h4>
+                    <p>Mimic human-like text conversations across multiple digital
+                      assets like applications, sites and interactive screens. Provide
+                      users with fluid and engaging responses that help answer
+                      questions, provide knowledge or enable services.
+                    </p>
+                    <h5 class="mt-5">Solution Profile</h5>
+                    <ul>
+                      <li> Automates repetitive, low order service and validation tasks</li>
+                        <li>Simultaneously manages multiple engagements, 24x7 </li>
+                         <li>Saves on dedicated human respondent resources</li>
+                         <li>Multilingual Voice/Text, Speech-to-Text support and data capture</li>
+                         <li>High-accuracy speech-accent recognition from mid-noise background clutter</li>
+                        <li>Seamless Integration with LMS & CRM systems</li>
+                        <li> Better UI/UX with easy switch between manual or voice input </li>
+                        <li>Easy navigation with graphic enabled interactive conversation </li>
+                        <li>Intuitive data fusion learning for Natural Language Processing support</li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
                     <img src="../assets/images/Logwiz.png" alt="Logwiz" title="Logwiz" >
-                  </figure>
+                  </div>
+                  <div class="col-6">
+                    <h5>Business Applications</h5>
+
+                    <mat-accordion class="example-headers-align" multi>
+                      <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            Personal data
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>dddddddddddddddd</p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel >
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              Personal data
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                          <p>dddddddddddddddd</p>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Personal data
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>dddddddddddddddd</p>
+                            </mat-expansion-panel>
+
+                        </mat-accordion>
+                  </div>
+                  <div class="col-6">
+                    <h5>Industry Usage Examples</h5>
+                  </div>
+                </div>
 
               </div>
-            </ng-template>
-          </li>
-        </ul>
 
-        <div [ngbNavOutlet]="procucts" class="mt-2 aiPlatfromCont"></div>
+
+            </mat-tab>
+            <mat-tab label="Call Center Analytics">Content 2</mat-tab>
+            <mat-tab label="Video Consent">Content 3</mat-tab>
+            <mat-tab label="Face Recognition">Content 1</mat-tab>
+            <mat-tab label="Smart Form VA">Content 2</mat-tab>
+            <mat-tab label="OCRWiz">Content 3</mat-tab>
+
+          </mat-tab-group>
+
+
+
+
 
             <div class="row">
                 <div class="col-6">

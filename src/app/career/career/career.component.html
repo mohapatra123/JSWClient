@@ -30,8 +30,8 @@
                     <div class="t-list" (click)="postCareer(item)">
                         <input type="hidden" name="careerId">
                         <h5>{{item.careerTitle}}</h5>
-                        <strong>{{item.careerType}}</strong>
-                        <span class="location"><span></span>{{item.location}}</span>
+                        <strong>{{ _careerTypeList[item.careerType] | textReplace: "_" }}</strong>
+                        <span class="location"><span></span>{{setLocation(item.city, item.workPlace)}}</span>
                         <!-- <h5>{{item.description}}</h5> -->
                         <span class="applay">Apply</span>
                     </div>
