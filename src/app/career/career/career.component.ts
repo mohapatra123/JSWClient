@@ -37,8 +37,8 @@ export class CareerComponent implements OnInit {
   }
 
   postCareer(item: any){
-    this._authService.setLocalValue('careerPostData', item)
-    this._router.navigateByUrl('career/create-career');
+    //this._authService.setLocalValue('careerPostData', item)
+    this._router.navigateByUrl('careers/' + item.careerId);
   }
 
   setLocation(city: string, workPlace: number): string{

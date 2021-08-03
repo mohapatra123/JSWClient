@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="pageTitl"><a routerLink="/career">Back To List</a>
             <span>{{careerObj.careerTitle}}</span>
-        <h5 style="color: white;">{{ _careerTypeList[careerObj.careerType] | textReplace: "_"}}</h5>
+        <h5 style="color: white;">{{ careerObj.careerType != '' ? (_careerTypeList[careerObj.careerType] | textReplace: "_") : ''}}</h5>
     </h2>
 
 
@@ -22,8 +22,11 @@
             <h2 class="SecTitle text-center">Description</h2>
             <div [innerHTML]="careerObj.description">
             </div>
-            <p> {{ setLocation(careerObj.city, careerObj.workPlace) }}</p>
-            <p> {{ getCountry(careerObj.country) }}</p>
+            <div class="location">
+                <span class="iconsprt map"></span><span>{{ getCountry(careerObj.country) }}, {{ setLocation(careerObj.city, careerObj.workPlace) }}</span>
+            </div>
+            <!-- <p> {{ setLocation(careerObj.city, careerObj.workPlace) }}</p>
+            <p> {{ getCountry(careerObj.country) }}</p> -->
 
             <div class="contactForm mt-5">
                 <h2 class="SecTitle text-center">Apply for This Role</h2>
@@ -41,6 +44,7 @@
                                 <input type="text" formControlName="firstName" class="form-control" placeholder="FIrst Name">
                                 <label class="form-label">First Name</label>
                             </div>
+
                         </div>
 
 

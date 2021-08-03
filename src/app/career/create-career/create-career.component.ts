@@ -20,7 +20,15 @@ export class CreateCareerComponent implements OnInit {
   _careerId: number = 0;
   jsonObject: any;
   careerOjbect: any;
-  careerObj: any;
+  careerObj: any = {
+    careerTitle: '',
+        careerType: '',
+        city: '',
+        description: '',
+        careerId: 0,
+        country: '',
+        workPlace: 0
+  };
   isPosted: boolean = false;
   _careerTypeList: any;
 
@@ -37,38 +45,44 @@ export class CreateCareerComponent implements OnInit {
     private _reactiveFormsModule: ReactiveFormsModule,
     private _authService: AuthService,
     private _careerService: CareerService,
-    private _router: Router) {
+    private _router: Router, private _activatedRoute: ActivatedRoute) {
 
      }
 
   ngOnInit(): void {
+    this._activatedRoute.queryParams.subscribe(params => {
+      console.log(params);
+    })
+    let id = this._activatedRoute.snapshot.paramMap.get("id");
+    console.log(id);
     this.countryArr = Country.getAllCountries();
     this._careerTypeList = careerTypes;
+    this.setForm(Number(id));
     window.scrollTo(0, 0);
-   this.setForm();
+
   }
 
-  setForm(){
-    if(this._authService.getLocalValue('careerPostData') != null && this._authService.getLocalValue('careerPostData') != undefined){
-      this.jsonObject = this._authService.getLocalValue('careerPostData');
-      this.careerOjbect = JSON.parse(this.jsonObject);
-      console.log(this.careerOjbect);
+  setForm(careerId: number){
+
+    this._careerService.getCareerById(careerId).subscribe(res => {
+      console.log(res);
       this.careerObj = {
-        careerTitle: this.careerOjbect.careerTitle,
-        careerType: this.careerOjbect.careerType,
-        city: this.careerOjbect.city,
-        description: this.careerOjbect.description,
-        careerId: this.careerOjbect.careerId,
-        country: this.careerOjbect.country,
-        workPlace: this.careerOjbect.workPlace
+        careerTitle: res.careerTitle,
+        careerType: res.careerType,
+        city: res.city,
+        description: res.description,
+        careerId: res.careerId,
+        country: res.country,
+        workPlace: res.workPlace
       }
-    }
+    })
+
     this.createCareerForm = this.fb.group({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       emailId: new FormControl('', [Validators.required]),
       location: new FormControl('', [Validators.required]),
-      careerId: new FormControl(this.careerOjbect.careerId),
+      careerId: new FormControl(careerId),
       phoneNo: new FormControl('', ),
       refInfo: new FormControl('', [Validators.required]),
       country: new FormControl('', [Validators.required]),

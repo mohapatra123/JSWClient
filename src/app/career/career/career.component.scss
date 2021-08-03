@@ -78,14 +78,50 @@
             box-shadow: 0 0 6px #ccc;
             height: 100%;
             cursor: pointer;
+            position: relative;
+            transition: all .2s ease-in-out;
             h5{
                 color: #002C67;
                 margin-bottom: 15px;
                 text-transform:capitalize ;
 
             }
+            strong{
+                margin: 0px 0 10px;
+                display: flex;
+                color: #707070;
+                font-size: 14px;
+            }
             p{
                 color: #707070;
+            }
+            .location{
+                display: flex;
+                align-items: center;
+                .map{
+                    height: 22px;
+                    width: 22px;
+                    background-position: -99px -66px;
+                    background-size: 468px;
+                    margin-right: 6px;
+                }
+            }
+            .applay{
+                position: absolute;
+                right: 30px;
+                bottom: 26px;
+                background: #d7cecb;
+                padding: 4px 10px;
+                color: #101010;
+                text-shadow: 1px 1px #8f8d8d;
+                transition: all .2s ease-in-out;
+
+
+            }
+            &:hover{
+                .applay{
+                    color: #FF5D2E;
+                }
             }
         }
         .formSec{

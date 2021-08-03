@@ -37,6 +37,22 @@ export class CareerService {
     );
   }
 
+  getCareerById(careerId: number): Observable<any>{
+    return this._http.get(this.baseUri + 'careers/' + careerId, { headers: this.header }).pipe(
+      map((response) => {
+          return response;
+      }), catchError(err => {
+        let errorMsg: string;
+        if (err.error instanceof ErrorEvent) {
+            this.errorMsg = `Error: ${err.error.message}`;
+        } else {
+            this.errorMsg = this.getServerErrorMessage(err);
+        }
+        return throwError(this.errorMsg);
+      })
+    );
+  }
+
   private getServerErrorMessage(error: HttpErrorResponse): string {
     switch (error.status) {
         case 404: {

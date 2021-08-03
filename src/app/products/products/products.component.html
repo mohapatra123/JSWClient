@@ -27,10 +27,11 @@
                     {{product.solution}}
                   </div>
                   <div class="col-6">
-                    <img [src]="product.imageUrl" alt="Logwiz" title="Logwiz" >                    
+                    <img [src]="product.imageUrl" alt="Logwiz" title="Logwiz" >
                   </div>
                   <div class="col-6">
-                    <h5>Business Applications</h5>
+                    <div>
+                    <h5 class="mb-4">Business Applications</h5>
                         <mat-accordion>
                           <mat-expansion-panel *ngFor="let businessData of product.business">
                             <mat-expansion-panel-header>{{businessData.heading}}</mat-expansion-panel-header>
@@ -38,14 +39,17 @@
                           </mat-expansion-panel>
                         </mat-accordion>
                   </div>
+                </div>
                   <div class="col-6">
-                    <h5>Industry Applications</h5>
+                    <div>
+                    <h5 class="mb-4">Industry Applications</h5>
                         <mat-accordion>
                           <mat-expansion-panel *ngFor="let industryData of product.industry">
                             <mat-expansion-panel-header>{{industryData.heading}}</mat-expansion-panel-header>
                             {{industryData.description}}
                           </mat-expansion-panel>
                         </mat-accordion>
+                      </div>
                   </div>
                   <!-- <div class="col-6">
                     <h5>Industry Usage Examples</h5>
@@ -54,73 +58,8 @@
               </div>
           </mat-tab>
           </mat-tab-group>
-            <div class="row">
-                <div class="col-6">
-                    <div class="t-list">
-                        <h5>Chatbot</h5>
-                        <p>A friendly chatbot backed by state-of-the-art Natural
-                            Language Processing that learns from  the simple FAQs
-                            which also supports casual conversations and abusive
-                            language detection.  Also provides major features like
-                            question suggestion when user’s question is not understood
-                            and log storage of individual user.</p>
-                    </div>
-                </div>
-                <div class="col-6">
-                 <div class="t-list">
-                     <h5>Face Recognition</h5>
-                     <p>A face recognition system developed using state-of-the-art
-                        deep learning techniques which supports a self-learning
-                        methodology that helps to improve performance. Recognizes face in microseconds even when scaled to thousands of users. Pretty much robust and requires minimal user data for effective recognition.</p>
-                 </div>
-             </div>
-             <div class="col-6">
-                <div class="t-list">
-                    <h5>OCRWiz</h5>
-                    <p>An OCR utility backed by Computer Vision, NLP and Deep
-                       Learning. It’s an end-to-end pipeline from the recognition of
-                       the KYC documents to extracting unstructured text
-                       information to converting it into meaningful structured
-                       information. It handles rotated, skewed and average quality
-                       images without degrading the performance.</p>
-                </div>
-            </div>
-             <div class="col-6">
-                 <div class="t-list">
-                     <h5>Smart Form</h5>
-                     <p>A smart form enabled with speech to text and text to speech
-                        utilities that enhance form filling journey by making it
-                        conversational. It will ease the process for the users by
-                        replacing the tedious manual form filling with interactive
-                        and conversational one thereby saving time and increasing
-                        the chances of conversion.</p>
-                 </div>
-             </div>
 
-             <div class="col-6">
-                 <div class="t-list">
-                     <h5>Call Center Analytics</h5>
-                     <p>Analytics to gain insights in an automated way using real-
-                        time Customer conversations to enhance business revenue
-                        by cross-selling & up-selling, prevent customer churn,
-                        improve customer satisfaction, assess the competency of
-                        the Customer-Representative call to measure agent
-                        performance, sentiment of words & analyse voice tone.</p>
-                 </div>
-             </div>
-             <div class="col-6">
-                <div class="t-list">
-                    <h5>Video Consent</h5>
-                    <p>According to RBI’s amendment to master direction on KYC,
-                        RBI has allowed to get on-board remote customers via Video
-                        Based Customer Identification Process (V-CIP). Video
-                        Consent KYC enables banks & lending companies to perform
-                        customer on-boarding by taking the customer’s photo &
-                        identity proof over mobile video session with Geo-location.</p>
-                </div>
-            </div>
-            </div>
-            <div class="formSec">
+            <div class="formSec mt-4">
                 <h5>Want to see in action?</h5>
                 <strong>Request a Demo</strong>
                 <div class="form">

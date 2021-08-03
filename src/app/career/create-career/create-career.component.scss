@@ -152,6 +152,16 @@
             width: 100%;
         }
     }
+    .location{
+        display: flex;
+        .map{
+            height: 22px;
+            width: 22px;
+            background-position: -61px -25px;
+            background-size: 468px;
+            margin-right: 6px;
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     .pageBanner {
