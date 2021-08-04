@@ -1,7 +1,7 @@
 export class product{
-    title = '';
+    heading = '';
     description = '';
-    imageUrl = '';
+    imageFile = '';
     solution = '';
     business: business[] = [{heading: '', description: ''}];
     industry: industry[] = [{heading: '', description: ''}]

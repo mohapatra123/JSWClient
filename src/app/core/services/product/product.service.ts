@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CareerService {
+export class ProductService {
 
   private readonly baseUri: string = environment.baseUri;
   private header: HttpHeaders;

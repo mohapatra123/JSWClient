@@ -15,11 +15,11 @@
     <section class="TrainingsSec">
         <div class="container">
           <mat-tab-group mat-align-tabs="start">
-            <mat-tab *ngFor="let product of productList; let i = index" [label]="product.title">
+            <mat-tab *ngFor="let product of productList; let i = index" [label]="product.heading">
               <div class="productContentPart">
                 <div class="row">
                   <div class="col-6">
-                    <h4>{{product.title}}</h4>
+                    <h4>{{product.heading}}</h4>
                     <p>
                       {{product.description}}
                     </p>
@@ -27,7 +27,7 @@
                     {{product.solution}}
                   </div>
                   <div class="col-6">
-                    <img [src]="product.imageUrl" alt="Logwiz" title="Logwiz" >
+                    <img [src]="product.imageFile" [alt]="product.heading" [title]="product.heading" >
                   </div>
                   <div class="col-6">
                     <div>
