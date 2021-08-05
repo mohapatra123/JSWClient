@@ -58,185 +58,51 @@
               </div>
           </mat-tab>
           </mat-tab-group>
-
             <div class="formSec mt-4">
                 <h5>Want to see in action?</h5>
                 <strong>Request a Demo</strong>
                 <div class="form">
                  <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
-
-                     <form action='https://crm.zoho.in/crm/WebForm' name=WebForm207144000000261136 method='POST'
-                       onSubmit='javascript:document.charset="UTF-8"; return checkMandatory207144000000261136()'
-                       accept-charset='UTF-8'>
-                       <input type='text' style='display:none;' name='xnQsjsdp'
-                         value='8c5a44735491abde9b3fadbeb451658312879c5b70911e53312c7a7bfcde376a'>
-                       <input type='hidden' name='zc_gad' id='zc_gad' value=''>
-                       <input type='text' style='display:none;' name='xmIwtLD'
-                         value='fe4ea5590f25456d620255e4b85cc30538c7477fe3e089a0429e4cdbb8620bc8'>
-                       <input type='text' style='display:none;' name='actionType' value='Q3VzdG9tTW9kdWxlMQ=='>
-                       <input type='text' style='display:none;' name='returnURL'
-                         value='http&#x3a;&#x2f;&#x2f;datasciencewizards.ai&#x2f;thankyou'>
-                       <div class="row">
-                         <div class="col-6">
-                           <div class="form-group">
-                             <input type="text" class="form-control" name="NAME" id="NAME" placeholder="First Name"
-                               required="required">
-                               <label class="form-label">First Name</label>
-                           </div>
-                         </div>
-                         <div class="col-6">
-                           <div class="form-group">
-
-                             <input type="text" class="form-control" name="COBJ1CF2" id="COBJ1CF2" placeholder="Last Name"
-                               required="required">
-                               <label class="form-label">Last Name</label>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="row">
-                         <div class="col-6">
-                           <div class="form-group">
-
-                             <input type="email" class="form-control" name="Email" id="Email" placeholder="Email Id"
-                               required="required">
-                               <label class="form-label">Email Address</label>
-                           </div>
-
-                         </div>
-                         <div class="col-6">
-                           <div class="form-group">
-
-                             <input type="phone" class="form-control" name="COBJ1CF3" id="COBJ1CF3" placeholder="Phone Number"
-                               required="required">
-                               <label class="form-label">Phone Number</label>
-                           </div>
-
-                         </div>
-                       </div>
-
-                       <div class="row">
-                         <div class="col-6">
-                           <div class="form-group">
-
-                             <input type="text" class="form-control" name="COBJ1CF4" id="COBJ1CF4" placeholder="Job Title">
-                             <label class="form-label">Job Title</label>
-                         </div>
-
-                         </div>
-                         <div class="col-6">
-                           <div class="form-group">
-
-                             <input type="text" class="form-control" name="COBJ1CF5" id="COBJ1CF5" placeholder="Company Name">
-                             <label class="form-label">Company Name</label>
-                         </div>
-
-                         </div>
-                       </div>
-
-                       <div class="row">
-                         <div class="col-12">
-                           <div class="form-group">
-
-                             <input type="text" class="form-control" name="COBJ1CF6" id="COBJ1CF6" placeholder="Country">
-                             <label class="form-label">Country</label>
-                           </div>
-
-                         </div>
-                       </div>
-                       <div class="row">
-                         <div class="col-12">
-                           <div class="form-group">
-
-                             <textarea class="form-control"  name="COBJ1CF1" id="COBJ1CF1" rows="3" placeholder="Message"
-                               required="required"></textarea>
-                               <label class="form-label">Message</label>
-                           </div>
-
-                         </div>
-                       </div>
-                       <p>By submitting your information to our website you agree to the terms outlined in our <a
-                           href="/privacypolicies"> Privacy Policy.</a></p>
-                       <button id='formsubmit' class="btn btn-primary btn-lg">Submit</button>
-                     </form>
-                   </div>
+                    <form [formGroup]="submitDemoForm" (ngSubmit)="submitForm()">
+                      <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="text" formControlName="emailId" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="text" formControlName="phoneNo" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Location</label>
+                        <input type="text" formControlName="location" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Job Title</label>
+                        <input type="text" formControlName="jobTitle" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" formControlName="companyName" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <input type="text" formControlName="message" class="form-control" placeholder="FIrst Name">                        
+                      </div>
+                      <div>
+                        <button mat-raised-button color="primary" type="submit">Submit</button>
+                      </div>
+                    </form>
+                 </div>
                 </div>
             </div>
          </div>
     </section>
 </section>
-<script>
-    function validateEmail207144000000261136() {
-      var form = document.forms['WebForm207144000000261136'];
-      var emailFld = form.querySelectorAll('[ftype=email]');
-      var i;
-      for (i = 0; i < emailFld.length; i++) {
-        var emailVal = emailFld[i].value;
-        if ((emailVal.replace(/^\s+|\s+$/g, '')).length != 0) {
-          var atpos = emailVal.indexOf('@');
-          var dotpos = emailVal.lastIndexOf('.');
-          if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
-            alert('Please enter a valid email address. ');
-            emailFld[i].focus();
-            return false;
-          }
-        }
-      }
-      return true;
-    }
-
-    function checkMandatory207144000000261136() {
-      var mndFileds = new Array('NAME', 'Email', 'COBJ1CF1', 'COBJ1CF2', 'COBJ1CF3', 'COBJ1CF4', 'COBJ1CF5', 'COBJ1CF6');
-      var fldLangVal = new Array('First\x20Name', 'Email', 'Message\x20Box', 'Last\x20Name', 'Phone\x20Number', 'Job\x20Title', 'Company', 'Country');
-      for (i = 0; i < mndFileds.length; i++) {
-        var fieldObj = document.forms['WebForm207144000000261136'][mndFileds[i]];
-        if (fieldObj) {
-          if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
-            if (fieldObj.type == 'file') {
-              alert('Please select a file to upload.');
-              fieldObj.focus();
-              return false;
-            }
-            alert(fldLangVal[i] + ' cannot be empty.');
-            fieldObj.focus();
-            return false;
-          } else if (fieldObj.nodeName == 'SELECT') {
-            if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
-              alert(fldLangVal[i] + ' cannot be none.');
-              fieldObj.focus();
-              return false;
-            }
-          } else if (fieldObj.type == 'checkbox') {
-            if (fieldObj.checked == false) {
-              alert('Please accept  ' + fldLangVal[i]);
-              fieldObj.focus();
-              return false;
-            }
-          }
-          try {
-            if (fieldObj.name == 'Last Name') {
-              name = fieldObj.value;
-            }
-          } catch (e) { }
-        }
-      }
-      if (!validateEmail207144000000261136()) { return false; }
-      document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
-    }
-
-    function tooltipShow207144000000261136(el) {
-      var tooltip = el.nextElementSibling;
-      var tooltipDisplay = tooltip.style.display;
-      if (tooltipDisplay == 'none') {
-        var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
-        for (i = 0; i < allTooltip.length; i++) {
-          allTooltip[i].style.display = 'none';
-        }
-        tooltip.style.display = 'block';
-      } else {
-        tooltip.style.display = 'none';
-      }
-    }
-  </script>
-  <!-- Do not remove this --- Analytics Tracking code starts -->
-  <script id='wf_anal'
-    src='https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=fe4ea5590f25456d620255e4b85cc30538c7477fe3e089a0429e4cdbb8620bc8gid8c5a44735491abde9b3fadbeb451658312879c5b70911e53312c7a7bfcde376agidb1956a2d91447e247afd6fcb2373c0815fb1fe4ba513801c7618ed2ca56ef1efgid4ee3a7e9ace6ab1be7c541b329164307'></script>
