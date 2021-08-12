@@ -29,6 +29,9 @@ export class CreateCareerComponent implements OnInit {
         country: '',
         workPlace: 0
   };
+  careerValidation: any = {
+    isFirstNameValid: true, isLastNameValid: true, isEmailValid: true, isPhoneValid: true, isCountryValid: true, isStateValid: true, isCityValid: true, isLinkedInValid: true, isFileValid: true
+  }
   isPosted: boolean = false;
   _careerTypeList: any;
 
@@ -90,29 +93,110 @@ export class CreateCareerComponent implements OnInit {
       city: new FormControl('', [Validators.required]),
       cvFile: new FormControl('', [Validators.required]),
       filePath: new FormControl(''),
-      linkedIn: new FormControl('', [Validators.required]),
+      linkedIn: new FormControl('', [Validators.required])
     });
   }
 
   onSubmit(){
-    // this._careerService.getCareer().subscribe(res => {
-    //   console.log(res)
-    // })
-    this.isPosted = false;
-    let formData: FormData = new FormData();
-    formData.append('cvFile', this.createCareerForm.get('filePath').value);
-    console.log(formData);
-    this._careerService.postCareer(this.createCareerForm.value, formData).subscribe(res => {
-      console.log(res)
-      if(res.error == false){
-        this.createCareerForm.reset();
-        this.isPosted = true;
-        this.inputFileType.nativeElement.value = null;
-        this._router.navigateByUrl('thankyou');
-      }
-    })
-    console.log(this.createCareerForm.value);
+    if(this.formValidation()){
+      console.log(this.createCareerForm);
+      // this._careerService.getCareer().subscribe(res => {
+      //   console.log(res)
+      // })
+      this.isPosted = false;
+      let formData: FormData = new FormData();
+      formData.append('cvFile', this.createCareerForm.get('filePath').value);
+      console.log(formData);
+      this._careerService.postCareer(this.createCareerForm.value, formData).subscribe(res => {
+        console.log(res)
+        if(res.error == false){
+          this.createCareerForm.reset();
+          this.isPosted = true;
+          this.inputFileType.nativeElement.value = null;
+          this._router.navigateByUrl('thankyou');
+        }
+      })
+      console.log(this.createCareerForm.value);
+    }    
   }
+
+  formValidation(): boolean{
+    console.log(this.createCareerForm.value);
+    let validForm: boolean = false;
+    if(this.createCareerForm.value.firstName == ''){
+      this.careerValidation.isFirstNameValid = false;
+      validForm = false;      
+    }
+    else{
+      this.careerValidation.isFirstNameValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.lastName == ''){
+      this.careerValidation.isLastNameValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isLastNameValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.emailId == ''){
+      this.careerValidation.isEmailValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isEmailValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.phoneNo == ''){
+      this.careerValidation.isPhoneValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isPhoneValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.country == ''){
+      this.careerValidation.isCountryValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isCountryValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.state == ''){
+      this.careerValidation.isStateValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isStateValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.city == ''){
+      this.careerValidation.isCityValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isCityValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.linkedIn == ''){
+      this.careerValidation.isLinkedInValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isLinkedInValid = true;
+      validForm = true;  
+    }
+    if(this.createCareerForm.value.filePath == '' || this.createCareerForm.value.filePath.type != 'application/pdf'){
+      this.careerValidation.isFileValid = false;
+      validForm = false;
+    }
+    else{
+      this.careerValidation.isFileValid = true;
+      validForm = true;  
+    }    
+    return validForm;
+  }  
 
   onFileChange(event: any){
     console.log(1);

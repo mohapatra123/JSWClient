@@ -31,7 +31,6 @@
             <div class="contactForm mt-5">
                 <h2 class="SecTitle text-center">Apply for This Role</h2>
 
-
                 <form [formGroup]="createCareerForm" (ngSubmit)="onSubmit()">
                     <div>
                         <input type="hidden" formControlName="careerId">
@@ -43,6 +42,7 @@
                             <div class="form-group">
                                 <input type="text" formControlName="firstName" class="form-control" placeholder="FIrst Name">
                                 <label class="form-label">First Name</label>
+                                <small *ngIf="!careerValidation.isFirstNameValid">enter firstname</small>
                             </div>
 
                         </div>
@@ -52,18 +52,21 @@
                     <div class="form-group">
                         <input type="text" formControlName="lastName" class="form-control" placeholder="Last Name">
                         <label class="form-label" for="lastName">Last Name</label>
+                        <small *ngIf="!careerValidation.isLastNameValid">enter Last Name</small>
                     </div>
                     </div>
                     <div class="col-12">
                     <div class="form-group">
                         <input type="text" formControlName="emailId" class="form-control" placeholder="EmailId">
                         <label class="form-label" for="emailId">Email</label>
+                        <small *ngIf="!careerValidation.isEmailValid">enter Email</small>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
                         <input type="text" formControlName="phoneNo" class="form-control" placeholder="Phone">
                         <label class="form-label" for="phoneNo">Phone</label>
+                        <small *ngIf="!careerValidation.isPhoneValid">enter Phone</small>
                     </div>
                 </div>
                 <!-- <div class="col-12">
@@ -81,6 +84,7 @@
                                     <option *ngFor="let item of countryArr" [value]="item.isoCode">{{item.name}}</option>
                                 </select>
                                 <label class="form-label" >Select Country</label>
+                                <small *ngIf="!careerValidation.isCountryValid">enter Country</small>
                             </div>
                         </div>
                         <div class="col-4">
@@ -90,6 +94,7 @@
                                     <option *ngFor="let item of stateArr" [value]="item.isoCode">{{item.name}}</option>
                                   </select>
                                   <label class="form-label" >Select State</label>
+                                  <small *ngIf="!careerValidation.isStateValid">enter State</small>
                             </div>
                         </div>
                         <div class="col-4">
@@ -99,6 +104,7 @@
                                     <option *ngFor="let item of cityArr" [value]="item.name">{{item.name}}</option>
                                 </select>
                                 <label class="form-label" >Select City</label>
+                                <small *ngIf="!careerValidation.isCityValid">enter City</small>
                             </div>
                         </div>
 
@@ -109,12 +115,13 @@
                     <div class="form-group">
                         <input type="text" formControlName="linkedIn" class="form-control" placeholder="LinkedIn">
                         <label class="form-label" for="linkedIn">LinkedIn</label>
+                        <small *ngIf="!careerValidation.isLinkedInValid">enter LinkedIn</small>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group ">
                         <input type="text" formControlName="refInfo" class="form-control" placeholder="refInfo">
-                        <label class="form-label" for="refInfo">RefInfo</label>
+                        <label class="form-label" for="refInfo">RefInfo</label>                        
                     </div>
                 </div>
 
@@ -128,7 +135,7 @@
                     </div> -->
                     <div class="custom-file">
                         <input type="file" #inputFile  id="file" (change)="onFileChange($event)" required>
-
+                        <small *ngIf="!careerValidation.isFileValid">Select PDF File</small>
                       </div>
 
                 </div>
