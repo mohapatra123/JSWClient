@@ -30,7 +30,7 @@ export class CreateCareerComponent implements OnInit {
         workPlace: 0
   };
   careerValidation: any = {
-    isFirstNameValid: true, isLastNameValid: true, isEmailValid: true, isPhoneValid: true, isCountryValid: true, isStateValid: true, isCityValid: true, isLinkedInValid: true, isFileValid: true
+    isFirstNameValid: true, isLastNameValid: true, isEmailValid: true, isPhoneValid: true, isCountryValid: true, isStateValid: true, isCityValid: true, isLinkedInValid: true, isFileValid: true, isValidEmailRegex: true, phoneNumber: ''
   }
   isPosted: boolean = false;
   _careerTypeList: any;
@@ -139,13 +139,19 @@ export class CreateCareerComponent implements OnInit {
       this.careerValidation.isLastNameValid = true;
       validForm = true;  
     }
-    if(this.createCareerForm.value.emailId == ''){
+    if(this.createCareerForm.value.emailId == ''){      
       this.careerValidation.isEmailValid = false;
       validForm = false;
     }
-    else{
-      this.careerValidation.isEmailValid = true;
-      validForm = true;  
+    else{      
+      this.careerValidation.isEmailValid = true;   
+      validForm = true;
+      const emailRegex = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/;
+      if(!emailRegex.test(String(this.createCareerForm.value.emailId).toLowerCase())){
+        this.careerValidation.isEmailValid = true;        
+        this.careerValidation.isValidEmailRegex = false;
+        validForm = false;
+      }  
     }
     if(this.createCareerForm.value.phoneNo == ''){
       this.careerValidation.isPhoneValid = false;

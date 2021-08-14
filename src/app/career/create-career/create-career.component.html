@@ -60,11 +60,12 @@
                         <input type="text" formControlName="emailId" class="form-control" placeholder="EmailId">
                         <label class="form-label" for="emailId">Email</label>
                         <small *ngIf="!careerValidation.isEmailValid">enter Email</small>
+                        <small *ngIf="!careerValidation.isValidEmailRegex">enter valid email</small>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
-                        <input type="text" formControlName="phoneNo" class="form-control" placeholder="Phone">
+                        <input type="number" formControlName="phoneNo" class="form-control" placeholder="Phone">
                         <label class="form-label" for="phoneNo">Phone</label>
                         <small *ngIf="!careerValidation.isPhoneValid">enter Phone</small>
                     </div>
